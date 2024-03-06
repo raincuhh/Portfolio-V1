@@ -42,6 +42,41 @@ let navbar = document.querySelector(".navbar .content");
 let menuOpen = false;
 let navbarTL = gsap.timeline();
 
+navbarToggleButton.addEventListener("click", toggleNavbar);
+
+function toggleNavbar() {
+  navbarToggleButton.removeEventListener("click", toggleNavbar);
+
+  if (!menuOpen) {
+    //console.log("openingMenu");
+    navbarTL
+      .to(":root", {
+        duration: 1,
+        "--nl": "100%",
+        "--nr": "86%",
+        ease: "power4.inOut",
+      })
+      .eventCallback("onComplete", () => {
+        navbarToggleButton.addEventListener("click", toggleNavbar);
+      });
+    menuOpen = true;
+  } else {
+    //console.log("closingMenu");
+    navbarTL
+      .to(":root", {
+        duration: 1,
+        "--nl": "0%",
+        "--nr": "0%",
+        ease: "power4.inOut",
+      })
+      .eventCallback("onComplete", () => {
+        navbarToggleButton.addEventListener("click", toggleNavbar);
+      });
+    menuOpen = false;
+  }
+}
+
+/*
 navbarToggleButton.addEventListener("click", () => {
   if (!menuOpen) {
     navbarTL.to(":root", {
@@ -49,7 +84,7 @@ navbarToggleButton.addEventListener("click", () => {
       "--nl": "100%",
       "--nr": "86%",
       ease: "power4.inOut",
-      /*
+      //
       onUpdate: function (progress) {
         console.log("Progress:", progress); // Debug
         const INTERPOLATED_VALUE = interpolateValues(86, 70, progress);
@@ -59,7 +94,7 @@ navbarToggleButton.addEventListener("click", () => {
           INTERPOLATED_VALUE + "%"
         );
       },
-      */
+      //
     });
     menuOpen = true;
   } else {
@@ -68,7 +103,7 @@ navbarToggleButton.addEventListener("click", () => {
       "--nl": "0%",
       "--nr": "0%",
       ease: "power4.inOut",
-      /*
+      
       onUpdate: function (progress) {
         console.log("Progress:", progress); // Debug
         const INTERPOLATED_VALUE = interpolateValues(70, 86, progress);
@@ -78,11 +113,12 @@ navbarToggleButton.addEventListener("click", () => {
           INTERPOLATED_VALUE + "%"
         );
       },
-      */
+      
     });
     menuOpen = false;
   }
 });
+*/
 
 function interpolateValues(startValue, endValue, progress) {
   return startValue + (endValue - startValue) * progress;
