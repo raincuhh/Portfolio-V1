@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filip.Dev</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="../globalLayout.css" />
+  </head>
+  <body>
+    <div class="root">
+      <section class="intro">
+        <div class="introInner">
+          <div class="introLabel">Filip Ryan /</div>
+          <div class="introLabel">©2024</div>
+        </div>
+      </section>
+
+      <header class="header">
+        <div class="left">
+          <button class="leftInner" onclick="window.location.reload()">
+            <div class="label">Filip Ryan /</div>
+          </button>
+        </div>
+        <div class="right">
+          <button class="rightInner" id="navbarToggleButton">
+            <div class="label">
+              <i class="bx bx-menu-alt-right"></i>
+            </div>
+          </button>
+        </div>
+      </header>
+
+      <nav class="navbar">
+        <div class="shade"></div>
+        <div class="content">
+          <div class="container">
+            <section class="contact">
+              <header class="title">Say hello</header>
+              <section class="inner">
+                <p class="contactTitle">Info</p>
+                <a href="tel:+4792081617"> +47 920 81 617 </a>
+                <a href="mailto:filipryanbusinessmail@gmail.com">
+                  filipryanbusinessmail@gmail.com
+                </a>
+              </section>
+            </section>
+            <section class="info">
+              <header class="label">
+                <div class="description">Get in touch</div>
+                <div class="description">with me</div>
+              </header>
+              <div class="socials">
+                <div class="social">
+                  <a href="#" id="linkedin">
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
+                </div>
+                <div class="social" id="github">
+                  <a href="#">
+                    <i class="bx bxl-github"></i>
+                  </a>
+                </div>
+                <div class="social" id="codepen">
+                  <a href="#">
+                    <i class="bx bxl-codepen"></i>
+                  </a>
+                </div>
+                <div class="social" id="twitter">
+                  <a href="#">
+                    <i class="bx bxl-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="hero">
+          <div class="heroInner">
+            <!--
+            <div class="top">
+              <div class="left">filip</div>
+
+              <div class="right">ryan</div>
+            </div>
+            <div class="bot">
+              <div class="left">s.</div>
+              <div class="right">paulsen</div>
+            </div>
+            -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- main js -->
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
