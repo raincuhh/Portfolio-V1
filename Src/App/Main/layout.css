@@ -69,15 +69,77 @@
   font-family: "Inter", sans-serif;
   z-index: 90;
 
-  .left,
-  .right {
-    .leftInner,
-    .rightInner {
+  .left {
+    .leftInner {
       background: transparent;
       .label {
         font-size: 1rem;
-        i {
-          font-size: 1.5rem;
+      }
+    }
+  }
+  .right {
+    .hamburger {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      .inner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        .hamburgerOpen {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          align-items: end;
+          justify-content: space-between;
+          width: 20px;
+          height: 20px;
+
+          transform: translate(0px, 0px);
+          opacity: 1;
+          .line {
+            height: 2px;
+            background-color: var(--text-base);
+          }
+          .line:nth-child(1) {
+            width: 26px;
+          }
+          .line:nth-child(2) {
+            width: 13px;
+          }
+          .line:nth-child(3) {
+            width: 17px;
+          }
+        }
+        .hamburgerClosed {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+
+          transform: translate(170px, 0px);
+          opacity: 0;
+          .line {
+            position: fixed;
+            height: 2px;
+            width: 25px;
+            background-color: var(--text-base);
+          }
+          .line:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          .line:nth-child(2) {
+            transform: rotate(135deg);
+          }
         }
       }
     }
@@ -139,8 +201,12 @@
       .info {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+
         .label {
-          margin-bottom: 2rem;
+          pointer-events: none;
+          margin-bottom: 1rem;
+          color: var(--text-base-black);
           font-size: 5rem;
           .description {
             text-align: end;

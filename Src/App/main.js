@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let intro = document.querySelector(".intro");
   let introLabel = document.querySelectorAll(".introLabel");
   let header = document.querySelector(".header");
-  let preLoader = gsap.timeline();
+  //let preLoader = gsap.timeline();
 
   setTimeout(() => {
     introLabel.forEach((span, i) => {
@@ -33,9 +33,43 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       gsap.to(header, {
         y: 0,
+        ease: "power4.inout",
       });
-    }, 4700);
+    }, 4400);
   }, 0);
+});
+
+let hamburger = document.querySelector(".hamburger");
+
+let hamburgerOpen = document.querySelector(".hamburger .inner .hamburgerOpen");
+let hamburgerClosed = document.querySelector(
+  ".hamburger .inner .hamburgerClosed"
+);
+
+let hamburgerLinesOpen = document.querySelectorAll(
+  ".hamburger .inner .hamburgerOpen .line"
+);
+let hamburgerLinesClosed = document.querySelectorAll(
+  ".hamburger .inner .hamburgerClosed .line"
+);
+let initialLineWidths = Array.from(hamburgerLinesOpen).map(
+  (line) => line.offsetWidth
+);
+
+hamburger.addEventListener("mouseover", () => {
+  gsap.to(hamburgerLinesOpen, {
+    duration: 0.2,
+    width: 20,
+    ease: "power4.out",
+  });
+});
+
+hamburger.addEventListener("mouseout", () => {
+  gsap.to(hamburgerLinesOpen, {
+    duration: 0.2,
+    width: (index) => initialLineWidths[index],
+    ease: "power4.out",
+  });
 });
 
 let navbarToggleButton = document.querySelector("#navbarToggleButton");
@@ -45,18 +79,16 @@ let menuOpen = false;
 let navbarTL = gsap.timeline();
 
 navbarToggleButton.addEventListener("click", toggleNavbar);
+navbarShade.addEventListener("click", shadeClosing);
 
 function toggleNavbar() {
   navbarToggleButton.removeEventListener("click", toggleNavbar);
-
   if (!menuOpen) {
     openNavbar();
   } else {
     closeNavbar();
   }
 }
-
-navbarShade.addEventListener("click", shadeClosing);
 
 function shadeClosing() {
   navbarShade.removeEventListener("click", shadeClosing);
@@ -69,29 +101,45 @@ function openNavbar() {
   //console.log("openingMenu");
   navbarTL
     .to(":root", {
-      duration: 1,
+      duration: 0.8,
       "--nl": "100%",
       "--nr": "86%",
       ease: "power4.inOut",
     })
     .eventCallback("onComplete", () => {
       navbarToggleButton.addEventListener("click", toggleNavbar);
-    });
-  navbarTL.to(
-    navbarShade,
-    {
-      duration: 1,
-      opacity: 1,
-      ease: "power4.inOut",
-      onComplete: () => {
-        navbarShade.style.pointerEvents = "auto";
+    })
+    .to(
+      navbarShade,
+      {
+        duration: 0.8,
+        opacity: 1,
+        ease: "power4.inOut",
+        onComplete: () => {
+          navbarShade.style.pointerEvents = "auto";
+        },
       },
-    },
-    "-=0.9"
-  );
+      "-=0.9"
+    )
+    .to(
+      hamburgerOpen,
+      {
+        x: 170,
+        opacity: 0,
+      },
+      "-=0.9"
+    )
+    .to(
+      hamburgerClosed,
+      {
+        x: 0,
+        opacity: 1,
+      },
+      "-=0.9"
+    );
 
   menuOpen = true;
-  console.log("menu is " + menuOpen);
+  console.log(menuOpen);
 }
 
 function closeNavbar() {
@@ -106,21 +154,37 @@ function closeNavbar() {
     .eventCallback("onComplete", () => {
       navbarToggleButton.addEventListener("click", toggleNavbar);
       navbarShade.addEventListener("click", shadeClosing);
-    });
-  navbarTL.to(
-    navbarShade,
-    {
-      duration: 1,
-      opacity: 0,
-      ease: "power4.inOut",
-      onComplete: () => {
-        navbarShade.style.pointerEvents = "none";
+    })
+    .to(
+      navbarShade,
+      {
+        duration: 0.8,
+        opacity: 0,
+        ease: "power4.inOut",
+        onComplete: () => {
+          navbarShade.style.pointerEvents = "none";
+        },
       },
-    },
-    "-=0.7"
-  );
+      "-=0.7"
+    )
+    .to(
+      hamburgerOpen,
+      {
+        x: 0,
+        opacity: 1,
+      },
+      "-=0.9"
+    )
+    .to(
+      hamburgerClosed,
+      {
+        x: 170,
+        opacity: 0,
+      },
+      "-=0.9"
+    );
   menuOpen = false;
-  console.log("menu is " + menuOpen);
+  console.log(menuOpen);
 }
 
 /*
