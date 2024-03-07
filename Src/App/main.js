@@ -1,43 +1,68 @@
 window.addEventListener("DOMContentLoaded", () => {
-  //console.log("domcontent loaded");
-  let intro = document.querySelector(".intro");
-  let introLabel = document.querySelectorAll(".introLabel");
   let header = document.querySelector(".header");
-  //let preLoader = gsap.timeline();
+  pagePreLoader();
 
   setTimeout(() => {
-    introLabel.forEach((span, i) => {
-      setTimeout(() => {
-        span.classList.add("active");
-      }, (i + 1) * 225);
+    gsap.to(header, {
+      y: 0,
+      ease: "power4.inout",
     });
-
-    setTimeout(() => {
-      introLabel.forEach((span, i) => {
-        setTimeout(() => {
-          span.classList.remove("active");
-          span.classList.add("fade");
-        }, (i + 1) * 225);
-      });
-    }, 2750);
-
-    setTimeout(() => {
-      gsap.to(intro, {
-        duration: 0.3,
-        top: "-150dvh",
-        ease: "power4.inOut",
-      });
-      //intro.style.top = "-150dvh";
-    }, 3800);
-
-    setTimeout(() => {
-      gsap.to(header, {
-        y: 0,
-        ease: "power4.inout",
-      });
-    }, 4400);
-  }, 0);
+  }, 3450);
 });
+
+function pagePreLoader() {
+  let logo = document.querySelector(".preLoader .logoFrame");
+  let purpleFrame = document.querySelector(".preLoader .purpleFrame");
+  let blackFrame = document.querySelector(".preLoader .blackFrame");
+
+  let preLoaderTL = gsap.timeline();
+
+  preLoaderTL
+    .fromTo(
+      purpleFrame,
+      { duration: 2.2, scaleX: 0 },
+      {
+        duration: 2,
+        scaleX: 1,
+        transformOrigin: "left",
+        ease: "power4.inOut",
+      }
+    )
+    .fromTo(
+      blackFrame,
+      { duration: 2.7, scaleX: 0 },
+      {
+        duration: 1.8,
+        scaleX: 1,
+        transformOrigin: "left",
+        ease: "power4.inOut",
+      },
+      0.35
+    )
+    .fromTo(
+      logo,
+      { duration: 2.4, xPercent: -150, opacity: 0 },
+      { duration: 1.2, xPercent: -50, opacity: 1, ease: "power4.inOut" },
+      0.78
+    )
+    .set(purpleFrame, {
+      scaleX: 0,
+    })
+    .to(blackFrame, {
+      duration: 1.7,
+      scaleX: 0,
+      transformOrigin: "right",
+      ease: "power4.inOut",
+    })
+    .to(
+      logo,
+      {
+        duration: 0.2,
+        opacity: 0,
+      },
+      "-=1.2"
+    );
+}
 
 let hamburger = document.querySelector(".hamburger");
 
@@ -126,16 +151,18 @@ function openNavbar() {
       {
         x: 170,
         opacity: 0,
+        ease: "power4.inOut",
       },
-      "-=0.9"
+      "-=0.5"
     )
     .to(
       hamburgerClosed,
       {
         x: 0,
         opacity: 1,
+        ease: "power4.inOut",
       },
-      "-=0.9"
+      "-=0.5"
     );
 
   menuOpen = true;
@@ -172,16 +199,18 @@ function closeNavbar() {
       {
         x: 0,
         opacity: 1,
+        ease: "power4.inOut",
       },
-      "-=0.9"
+      "-=0.5"
     )
     .to(
       hamburgerClosed,
       {
         x: 170,
         opacity: 0,
+        ease: "power4.inOut",
       },
-      "-=0.9"
+      "-=0.5"
     );
   menuOpen = false;
   console.log(menuOpen);
