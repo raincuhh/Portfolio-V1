@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let intro = document.querySelector(".intro");
   let introLabel = document.querySelectorAll(".introLabel");
   let header = document.querySelector(".header");
+  let preLoader = gsap.timeline();
 
   setTimeout(() => {
     introLabel.forEach((span, i) => {
@@ -39,11 +40,90 @@ window.addEventListener("DOMContentLoaded", () => {
 
 let navbarToggleButton = document.querySelector("#navbarToggleButton");
 let navbar = document.querySelector(".navbar .content");
+let navbarShade = document.querySelector(".navbar .shade");
 let menuOpen = false;
 let navbarTL = gsap.timeline();
 
 navbarToggleButton.addEventListener("click", toggleNavbar);
 
+function toggleNavbar() {
+  navbarToggleButton.removeEventListener("click", toggleNavbar);
+
+  if (!menuOpen) {
+    openNavbar();
+  } else {
+    closeNavbar();
+  }
+}
+
+navbarShade.addEventListener("click", shadeClosing);
+
+function shadeClosing() {
+  navbarShade.removeEventListener("click", shadeClosing);
+  //slight delay problem when i click shade then trying to open navbar again
+  console.log("clickedShade");
+  closeNavbar();
+}
+
+function openNavbar() {
+  //console.log("openingMenu");
+  navbarTL
+    .to(":root", {
+      duration: 1,
+      "--nl": "100%",
+      "--nr": "86%",
+      ease: "power4.inOut",
+    })
+    .eventCallback("onComplete", () => {
+      navbarToggleButton.addEventListener("click", toggleNavbar);
+    });
+  navbarTL.to(
+    navbarShade,
+    {
+      duration: 1,
+      opacity: 1,
+      ease: "power4.inOut",
+      onComplete: () => {
+        navbarShade.style.pointerEvents = "auto";
+      },
+    },
+    "-=0.9"
+  );
+
+  menuOpen = true;
+  console.log("menu is " + menuOpen);
+}
+
+function closeNavbar() {
+  //console.log("closingMenu");
+  navbarTL
+    .to(":root", {
+      duration: 0.8,
+      "--nl": "0%",
+      "--nr": "0%",
+      ease: "power4.inOut",
+    })
+    .eventCallback("onComplete", () => {
+      navbarToggleButton.addEventListener("click", toggleNavbar);
+      navbarShade.addEventListener("click", shadeClosing);
+    });
+  navbarTL.to(
+    navbarShade,
+    {
+      duration: 1,
+      opacity: 0,
+      ease: "power4.inOut",
+      onComplete: () => {
+        navbarShade.style.pointerEvents = "none";
+      },
+    },
+    "-=0.7"
+  );
+  menuOpen = false;
+  console.log("menu is " + menuOpen);
+}
+
+/*
 function toggleNavbar() {
   navbarToggleButton.removeEventListener("click", toggleNavbar);
 
@@ -59,6 +139,15 @@ function toggleNavbar() {
       .eventCallback("onComplete", () => {
         navbarToggleButton.addEventListener("click", toggleNavbar);
       });
+    navbarTL.to(
+      navbarShade,
+      {
+        duration: 1,
+        opacity: 1,
+        ease: "power4.inOut",
+      },
+      "-=0.9"
+    );
     menuOpen = true;
   } else {
     //console.log("closingMenu");
@@ -72,52 +161,18 @@ function toggleNavbar() {
       .eventCallback("onComplete", () => {
         navbarToggleButton.addEventListener("click", toggleNavbar);
       });
+    navbarTL.to(
+      navbarShade,
+      {
+        duration: 1,
+        opacity: 0,
+        ease: "power4.inOut",
+      },
+      "-=0.9"
+    );
     menuOpen = false;
   }
 }
-
-/*
-navbarToggleButton.addEventListener("click", () => {
-  if (!menuOpen) {
-    navbarTL.to(":root", {
-      duration: 1,
-      "--nl": "100%",
-      "--nr": "86%",
-      ease: "power4.inOut",
-      //
-      onUpdate: function (progress) {
-        console.log("Progress:", progress); // Debug
-        const INTERPOLATED_VALUE = interpolateValues(86, 70, progress);
-        console.log("Interpolated value:", INTERPOLATED_VALUE); // Debug
-        document.documentElement.style.setProperty(
-          "--nr",
-          INTERPOLATED_VALUE + "%"
-        );
-      },
-      //
-    });
-    menuOpen = true;
-  } else {
-    navbarTL.to(":root", {
-      duration: 1,
-      "--nl": "0%",
-      "--nr": "0%",
-      ease: "power4.inOut",
-      
-      onUpdate: function (progress) {
-        console.log("Progress:", progress); // Debug
-        const INTERPOLATED_VALUE = interpolateValues(70, 86, progress);
-        console.log("Interpolated value:", INTERPOLATED_VALUE); // Debug
-        document.documentElement.style.setProperty(
-          "--nr",
-          INTERPOLATED_VALUE + "%"
-        );
-      },
-      
-    });
-    menuOpen = false;
-  }
-});
 */
 
 function interpolateValues(startValue, endValue, progress) {
