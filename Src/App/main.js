@@ -2,19 +2,22 @@ window.addEventListener("DOMContentLoaded", () => {
   let header = document.querySelector(".header");
   pagePreLoader();
 
-  setTimeout(() => {
-    gsap.to(header, {
-      y: 0,
-      ease: "power4.inout",
-    });
-  }, 3450);
+  function dropDownHeader() {
+    setTimeout(() => {
+      gsap.to(header, {
+        y: 0,
+        ease: "power4.inout",
+      });
+    }, 3270);
+  }
+  dropDownHeader();
 });
 
 function pagePreLoader() {
   let logo = document.querySelector(".preLoader .logoFrame");
+  let placeholderFrame = document.querySelector(".preLoader .placeholderFrame");
   let purpleFrame = document.querySelector(".preLoader .purpleFrame");
   let blackFrame = document.querySelector(".preLoader .blackFrame");
-
   let preLoaderTL = gsap.timeline();
 
   preLoaderTL
@@ -41,15 +44,15 @@ function pagePreLoader() {
     )
     .fromTo(
       logo,
-      { duration: 2.4, xPercent: -150, opacity: 0 },
-      { duration: 1.2, xPercent: -50, opacity: 1, ease: "power4.inOut" },
-      0.78
+      { duration: 2.4, xPercent: -40, opacity: 0 },
+      { duration: 1.2, xPercent: 0, opacity: 1, ease: "power4.inOut" },
+      0.7
     )
     .set(purpleFrame, {
       scaleX: 0,
     })
     .to(blackFrame, {
-      duration: 1.7,
+      duration: 1.5,
       scaleX: 0,
       transformOrigin: "right",
       ease: "power4.inOut",
@@ -57,20 +60,26 @@ function pagePreLoader() {
     .to(
       logo,
       {
-        duration: 0.2,
+        duration: 0.125,
         opacity: 0,
       },
-      "-=1.2"
+      "-=1"
+    )
+    .to(
+      placeholderFrame,
+      {
+        duration: 0.1,
+        opacity: 0,
+      },
+      "-=1.5"
     );
 }
 
 let hamburger = document.querySelector(".hamburger");
-
 let hamburgerOpen = document.querySelector(".hamburger .inner .hamburgerOpen");
 let hamburgerClosed = document.querySelector(
   ".hamburger .inner .hamburgerClosed"
 );
-
 let hamburgerLinesOpen = document.querySelectorAll(
   ".hamburger .inner .hamburgerOpen .line"
 );

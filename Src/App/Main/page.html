@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filip.Dev</title>
+    <title>Portfolio | Filip Ryan</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="../globalLayout.css" />
+    <link rel="stylesheet" href="/Src/Assets/fonts.css" />
   </head>
   <body>
     <div class="root">
@@ -22,9 +23,12 @@
       </section>
       -->
       <div class="preLoader">
+        <div class="placeholderFrame"></div>
         <div class="purpleFrame"></div>
         <div class="blackFrame"></div>
-        <div class="logoFrame">Filip Ryan</div>
+        <div class="logoFrame">
+          <img src="/Src/Assets/FRLOGO.png" alt="FR" class="logo" />
+        </div>
       </div>
 
       <header class="header">
@@ -96,23 +100,35 @@
         </div>
       </nav>
 
-      <main>
-        <section class="hero">
-          <div class="heroInner">
-            hero
-            <!--
-            <div class="top">
-              <div class="left">filip</div>
-
-              <div class="right">ryan</div>
-            </div>
+      <main class="layout">
+        <section class="sectionHero">
+          <div class="heroTitle">
+            <div class="top">filip ryan .s</div>
             <div class="bot">
-              <div class="left">s.</div>
-              <div class="right">paulsen</div>
+              <div class="description">
+                <span class="descriptionInner">
+                  <span class="descriptionHeader">Get to know me</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione, tenetur. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Accusantium, exercitationem!
+                </span>
+                <div class="pointer">
+                  <span class="hint">scroll</span>
+                  <span class="arrow">
+                    <i class="bx bx-down-arrow-alt"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="left">paulsen .dev</div>
             </div>
-            -->
           </div>
         </section>
+        <section class="sectionMain">
+          <div class="section" id="sectionCv">cv</div>
+          <div class="section" id="sectionAbout">about</div>
+          <div class="section" id="sectionProjects ">projects</div>
+        </section>
+        <div class="sectionFooter"></div>
       </main>
     </div>
 

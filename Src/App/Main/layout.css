@@ -3,13 +3,14 @@
   overflow: hidden;
 }
 .preLoader {
-  .blackFrame {
+  pointer-events: none;
+  .placeholderFrame {
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--bg-lowest);
+    background-color: var(--bg-base);
   }
   .purpleFrame {
     position: fixed;
@@ -19,14 +20,26 @@
     width: 100vw;
     background-color: var(--brand-positive-base);
   }
-  .logoFrame {
-    font-family: "inter", sans-serif;
-    font-size: 5rem;
-    color: var(--text-base);
+  .blackFrame {
     position: fixed;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-base);
+  }
+  .logoFrame {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      width: 200px;
+      height: auto;
+    }
   }
 }
 
@@ -58,10 +71,6 @@
       font-size: clamp(0.9rem, 4vw, 1.25rem);
       font-family: "poppins", sans-serif;
     }
-    /*
-      .introLabel:nth-child(2) {
-      }
-      */
     .introLabel:nth-child(3) {
       display: flex;
       justify-content: center;
@@ -94,21 +103,25 @@
   top: clamp(1rem, 4vw, 2rem);
   transform: translateY(-100px);
   padding: 0 clamp(1rem, 6.4vw, 5rem);
-  font-family: "Inter", sans-serif;
   z-index: 90;
 
   .left {
     .leftInner {
       background: transparent;
       .label {
+        font-family: "Inter", sans-serif;
         font-size: 1rem;
+        text-transform: uppercase;
+        color: var(--text-base);
       }
     }
   }
   .right {
     .hamburger {
+      /*
       width: 60px;
       height: 60px;
+      */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -181,6 +194,7 @@
   width: 100%;
   top: 0; /*-100%;*/
   z-index: 50;
+  pointer-events: none;
   .shade {
     position: absolute;
     width: 100%;
@@ -199,10 +213,14 @@
     width: 100%;
     height: 76dvh;
     padding-top: clamp(1rem, 4vw, 2rem);
-    background-color: var(--brand-positive-base);
+    background-color: var(--bg-elevated-highlight);
 
     clip-path: polygon(0 0, 100% 0, 100% var(--nl), 0 var(--nr));
     cursor: pointer;
+    color: var(--text-base);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
 
     .container {
       display: flex;
@@ -222,7 +240,7 @@
           flex-direction: column;
           a {
             text-decoration: none;
-            color: var(--text-base-black);
+            color: var(--text-base);
           }
         }
       }
@@ -234,7 +252,7 @@
         .label {
           pointer-events: none;
           margin-bottom: 1rem;
-          color: var(--text-base-black);
+          color: var(--text-base);
           font-size: 5rem;
           .description {
             text-align: end;
@@ -248,7 +266,7 @@
           .social {
             a {
               i {
-                color: var(--text-base-black);
+                color: var(--text-base);
                 font-size: 1.2rem;
               }
             }
@@ -259,7 +277,89 @@
   }
 }
 
-.hero {
-  height: 200dvh;
+.layout {
   background-color: var(--bg-base);
+  .sectionHero {
+    height: 100dvh;
+    .heroTitle {
+      padding-top: 6.7rem;
+      color: var(--text-base);
+      padding: 0 clamp(1.5rem, 6.4vw, 5rem);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 12rem;
+      .top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 13rem;
+        letter-spacing: -0.6rem;
+      }
+      .bot {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left {
+          font-family: "Bebas Neue", sans-serif;
+          font-size: 13rem;
+          letter-spacing: -0.2rem;
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+
+          .descriptionInner {
+            color: var(--text-highlight);
+            font-size: 1rem;
+            font-family: "hind", sans-serif;
+            width: 14rem;
+            line-height: 1rem;
+            .descriptionHeader {
+              padding-right: 0.5rem;
+              color: var(--text-base);
+              font-size: 0.8rem;
+              font-family: "inter", sans-serif;
+              font-weight: 700;
+            }
+          }
+          .pointer {
+            padding-top: 2.5rem;
+            line-height: 1rem;
+            display: flex;
+            align-items: center;
+            .hint {
+              font-size: 0.8rem;
+              font-family: "inter", sans-serif;
+            }
+            .arrow {
+              padding-left: 1rem;
+              i {
+                color: var(--text-highlight);
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sectionMain {
+    .section {
+      height: 50dvh;
+      color: var(--text-base);
+    }
+    /*
+    #sectionCv {
+    }
+    #sectionAbout {
+    }
+    #sectionProjects {
+    }
+    */
+  }
 }
