@@ -9,22 +9,26 @@
 
 :root {
   --bg-lowest: rgba(0, 0, 0);
-  /*--bg-base: rgba(18, 18, 18);
-  --bg-highlight: rgba(26, 26, 26);*/
+  /*
+  --bg-base: rgba(18, 18, 18);
+  --bg-highlight: rgba(26, 26, 26);
+  */
   --bg-elevated-base: #242424;
   --bg-elevated-highlight: #2a2a2a;
   --bg-lowest-reverse: rgb(255, 255, 255);
   --bg-base-reverse: rgb(--text-base);
 
-  /*--text-base: rgba(255, 255, 255);
+  /*
+  --text-base: rgba(255, 255, 255);
   --text-subdued: rgba(167, 167, 167);
-  --text-base-black: rgba(0, 0, 0, 1);*/
+  --text-base-black: rgba(0, 0, 0, 1);
+  */
   --brand-positive-base: rgba(110, 62, 166);
   --brand-positive-highlight: rgba(121, 68, 181);
   --brand-positive-subdued: rgb(95, 53, 143);
 
   --bg-base: #111;
-  --text-base: #777;
+  --text-base: rgb(119, 119, 119);
   --text-highlight: rgb(170, 170, 170);
 
   --nl: 0%; /*100%;*/

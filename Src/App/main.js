@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
-  let header = document.querySelector(".header");
+  let header = document.querySelector(".topHeader");
   pagePreLoader();
-
   function dropDownHeader() {
     setTimeout(() => {
       gsap.to(header, {
@@ -13,16 +12,30 @@ window.addEventListener("DOMContentLoaded", () => {
   dropDownHeader();
 });
 
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0);
+};
+
+/* //make this in the main timeline
+window.onscroll = () => {
+  let header = document.querySelector(".topHeader");
+  gsap.to(header, {
+    y: "-100",
+    ease: "power4.inout",
+  });
+};
+*/
+
 function pagePreLoader() {
   let logo = document.querySelector(".preLoader .logoFrame");
   let placeholderFrame = document.querySelector(".preLoader .placeholderFrame");
-  let purpleFrame = document.querySelector(".preLoader .purpleFrame");
+  let grayFrame = document.querySelector(".preLoader .grayFrame");
   let blackFrame = document.querySelector(".preLoader .blackFrame");
   let preLoaderTL = gsap.timeline();
 
   preLoaderTL
     .fromTo(
-      purpleFrame,
+      grayFrame,
       { duration: 2.2, scaleX: 0 },
       {
         duration: 2,
@@ -48,7 +61,7 @@ function pagePreLoader() {
       { duration: 1.2, xPercent: 0, opacity: 1, ease: "power4.inOut" },
       0.7
     )
-    .set(purpleFrame, {
+    .set(grayFrame, {
       scaleX: 0,
     })
     .to(blackFrame, {
