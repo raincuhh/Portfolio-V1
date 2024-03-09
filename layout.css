@@ -40,7 +40,7 @@
     align-items: center;
 
     .logo {
-      width: 200px;
+      width: max(15vw, min(20vw + 50px)) /*200px*/;
       height: auto;
     }
   }
@@ -175,6 +175,7 @@
     font-size: 1rem;
     text-transform: uppercase;
 
+    pointer-events: all;
     .container {
       display: flex;
       justify-content: space-between;
@@ -245,67 +246,70 @@
 .layout {
   background-color: var(--bg-base);
   .sectionHero {
-    height: 100dvh;
-    .heroTitle {
-      padding-top: 6.7rem;
-      color: var(--text-base);
-      padding: 0 clamp(1.5rem, 6.4vw, 5rem);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      line-height: 11rem;
-      .top {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 13rem;
-        letter-spacing: -0.65rem; /*-0.2rem for mobile*/
-      }
-      .bot {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        .left {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: max(1.5rem, min(4vw - 0.05rem));
+      padding-right: max(1.5rem, min(4vw - 0.05rem));
+      .heroTitle {
+        color: var(--text-base);
+
+        line-height: 10rem;
+        .heroTitleText {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
           font-family: "Bebas Neue", sans-serif;
-          font-size: 13rem;
-          letter-spacing: -0.4rem; /*-0.2rem for mobile*/
+          font-size: max(5rem, min(13vw + 2rem, 18rem));
+          letter-spacing: -0.2rem;
         }
 
-        .description {
+        .bot {
+          width: 100%;
           display: flex;
-          flex-direction: column;
+          justify-content: space-between;
 
-          .descriptionInner {
-            color: var(--text-highlight);
-            font-size: 1rem;
-            font-family: "hind", sans-serif;
-            width: 14rem;
-            line-height: 1rem;
-            padding-bottom: 1rem;
-            .descriptionHeader {
-              padding-right: 0.5rem;
-              color: var(--text-base);
-              font-size: 0.8rem;
-              font-family: "inter", sans-serif;
-              font-weight: 700;
-            }
+          .left {
+            align-items: end;
           }
-          .pointer {
-            line-height: 1rem;
+
+          .description {
             display: flex;
-            align-items: center;
-            .hint {
-              font-size: 0.8rem;
-              font-family: "inter", sans-serif;
+            flex-direction: column;
+
+            .descriptionInner {
+              color: var(--text-highlight);
+              font-size: 1rem;
+              font-family: "hind", sans-serif;
+              width: 14rem;
+              line-height: 1rem;
+              padding-bottom: 1rem;
+              .descriptionHeader {
+                padding-right: 0.5rem;
+                color: var(--text-base);
+                font-size: 0.8rem;
+                font-family: "inter", sans-serif;
+                font-weight: 700;
+              }
             }
-            .arrow {
-              padding-left: 1rem;
-              i {
-                color: var(--text-highlight);
-                font-size: 1.5rem;
+            .pointer {
+              line-height: 1rem;
+              display: flex;
+              align-items: center;
+              .hint {
+                font-size: 0.8rem;
+                font-family: "inter", sans-serif;
+              }
+              .arrow {
+                padding-left: 1rem;
+                i {
+                  color: var(--text-highlight);
+                  font-size: 1.5rem;
+                }
               }
             }
           }
