@@ -67,6 +67,7 @@
         font-size: clamp(1rem, 10vw, 1.2rem);
         text-transform: uppercase;
         color: var(--text-base);
+        transition: var(--transition-hover-base);
       }
     }
   }
@@ -101,6 +102,7 @@
           .line {
             height: 2px;
             background-color: var(--text-base);
+            transition: var(--transition-hover-base);
           }
           .line:nth-child(1) {
             width: 26px;
@@ -128,12 +130,36 @@
             height: 2px;
             width: 25px;
             background-color: var(--text-base);
+            transition: var(--transition-hover-base);
           }
           .line:nth-child(1) {
             transform: rotate(45deg);
           }
           .line:nth-child(2) {
             transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+  .left:hover {
+    .leftInner {
+      .label {
+        color: var(--text-highlight);
+      }
+    }
+  }
+  .right:hover {
+    .hamburger {
+      .inner {
+        .hamburgerOpen {
+          .line {
+            background-color: var(--text-highlight);
+          }
+        }
+        .hamburgerClosed {
+          .line {
+            background-color: var(--text-highlight);
           }
         }
       }
@@ -191,10 +217,11 @@
         .contact {
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
           font-size: 1rem;
           padding-bottom: 5rem;
           .title {
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
           }
           .contactInfo {
             display: flex;
@@ -202,6 +229,10 @@
             a {
               text-decoration: none;
               color: var(--text-base);
+              transition: var(--transition-hover-base);
+            }
+            a:hover {
+              color: var(--text-highlight);
             }
           }
         }
@@ -227,7 +258,13 @@
               a {
                 i {
                   color: var(--text-base);
-                  font-size: 1.2rem;
+                  font-size: clamp(1.2rem, 6.4vw, 1.5rem);
+                  transition: var(--transition-hover-base);
+                }
+              }
+              a:hover {
+                i {
+                  color: var(--text-highlight);
                 }
               }
             }
@@ -260,7 +297,8 @@
     .container {
       width: 100%;
       margin: 0 auto;
-      padding: 0 max(1.5rem, min(6vw - 0.05rem));
+      padding: 8rem max(1.5rem, min(6vw - 0.05rem)) 0;
+
       max-width: 120rem;
       .heroTitle {
         color: var(--text-base);
@@ -285,14 +323,14 @@
         .description {
           display: flex;
           flex-direction: column;
+          gap: 1.5rem;
 
           .descriptionInner {
             color: var(--text-highlight);
             font-size: 1rem;
             font-family: "hind", sans-serif;
-            width: 14rem;
+            width: 15rem;
             line-height: 1rem;
-            padding-bottom: 1rem;
             .descriptionHeader {
               padding-right: 0.5rem;
               color: var(--text-base);
@@ -314,7 +352,7 @@
               padding-left: 1rem;
               i {
                 color: var(--text-highlight);
-                font-size: 1.5rem;
+                font-size: 2rem;
               }
             }
           }
