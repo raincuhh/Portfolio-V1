@@ -26,6 +26,8 @@ window.onscroll = () => {
 };
 */
 
+//testing git pull on main pc
+
 function pagePreLoader() {
   let logo = document.querySelector(".preLoader .logoFrame");
   let placeholderFrame = document.querySelector(".preLoader .placeholderFrame");
