@@ -53,9 +53,10 @@
   align-items: center;
   width: 100%;
 
-  top: clamp(1rem, 4vw, 2rem);
+  top: clamp(1rem, 4vw, 4rem);
   transform: translateY(-100px);
-  padding: 0 clamp(1rem, 6.4vw, 5rem);
+  margin: 0 auto;
+  padding: 0 max(1.5rem, min(6vw - 0.05rem));
   z-index: 90;
 
   .left {
@@ -63,7 +64,7 @@
       background: transparent;
       .label {
         font-family: "Inter", sans-serif;
-        font-size: 1rem;
+        font-size: clamp(1rem, 10vw, 1.2rem);
         text-transform: uppercase;
         color: var(--text-base);
       }
@@ -161,11 +162,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
 
     width: 100%;
-    height: 76dvh;
-    padding-top: clamp(1rem, 4vw, 2rem);
+    height: 89dvh;
     background-color: var(--bg-elevated-highlight);
 
     clip-path: polygon(0 0, 100% 0, 100% var(--nl), 0 var(--nr));
@@ -176,52 +175,60 @@
     text-transform: uppercase;
 
     pointer-events: all;
+
     .container {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
-      padding: 0 clamp(1.5rem, 6.4vw, 5rem);
-
-      .contact {
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        .title {
-          margin-bottom: 4rem;
-        }
-        .inner {
-          display: flex;
-          flex-direction: column;
-          a {
-            text-decoration: none;
-            color: var(--text-base);
-          }
-        }
-      }
-      .info {
+      .inner {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        .label {
-          pointer-events: none;
-          margin-bottom: 1rem;
-          color: var(--text-base);
-          font-size: 5rem;
-          .description {
-            text-align: end;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 max(1.5rem, min(6vw - 0.05rem));
+        .contact {
+          display: flex;
+          flex-direction: column;
+          font-size: 1rem;
+          padding-bottom: 5rem;
+          .title {
+            margin-bottom: 4rem;
+          }
+          .contactInfo {
+            display: flex;
+            flex-direction: column;
+            a {
+              text-decoration: none;
+              color: var(--text-base);
+            }
           }
         }
-        .socials {
+        .info {
           display: flex;
-          gap: 1rem;
-          align-items: end;
-          justify-content: end;
-          .social {
-            a {
-              i {
-                color: var(--text-base);
-                font-size: 1.2rem;
+          flex-direction: column;
+          .label {
+            pointer-events: none;
+            margin-bottom: 1rem;
+            color: var(--text-base);
+            font-size: 5rem;
+            font-family: "vogue", sans-serif;
+            .description {
+              text-align: start;
+            }
+          }
+          .socials {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+            justify-content: start;
+            .social {
+              a {
+                i {
+                  color: var(--text-base);
+                  font-size: 1.2rem;
+                }
               }
             }
           }
@@ -251,65 +258,63 @@
     align-items: center;
 
     .container {
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: max(1.5rem, min(4vw - 0.05rem));
-      padding-right: max(1.5rem, min(4vw - 0.05rem));
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 max(1.5rem, min(6vw - 0.05rem));
+      max-width: 120rem;
       .heroTitle {
         color: var(--text-base);
-
-        line-height: 10rem;
+        line-height: clamp(6.5rem, 14vw, 17rem);
+        padding-bottom: clamp(2rem, 10vw, 3rem);
         .heroTitleText {
           width: 100%;
           display: flex;
           justify-content: space-between;
-          font-family: "Bebas Neue", sans-serif;
+          font-family: "roboto", sans-serif;
           font-size: max(5rem, min(13vw + 2rem, 18rem));
-          letter-spacing: -0.2rem;
+          letter-spacing: -0.15rem;
         }
-
-        .bot {
-          width: 100%;
+        .heroTitleText:nth-child(2) {
           display: flex;
-          justify-content: space-between;
+          width: 100%;
+          justify-content: end;
+        }
+      }
 
-          .left {
-            align-items: end;
-          }
+      .heroDescription {
+        .description {
+          display: flex;
+          flex-direction: column;
 
-          .description {
-            display: flex;
-            flex-direction: column;
-
-            .descriptionInner {
-              color: var(--text-highlight);
-              font-size: 1rem;
-              font-family: "hind", sans-serif;
-              width: 14rem;
-              line-height: 1rem;
-              padding-bottom: 1rem;
-              .descriptionHeader {
-                padding-right: 0.5rem;
-                color: var(--text-base);
-                font-size: 0.8rem;
-                font-family: "inter", sans-serif;
-                font-weight: 700;
-              }
+          .descriptionInner {
+            color: var(--text-highlight);
+            font-size: 1rem;
+            font-family: "hind", sans-serif;
+            width: 14rem;
+            line-height: 1rem;
+            padding-bottom: 1rem;
+            .descriptionHeader {
+              padding-right: 0.5rem;
+              color: var(--text-base);
+              font-size: 0.8rem;
+              font-family: "inter", sans-serif;
+              font-weight: 700;
             }
-            .pointer {
-              line-height: 1rem;
-              display: flex;
-              align-items: center;
-              .hint {
-                font-size: 0.8rem;
-                font-family: "inter", sans-serif;
-              }
-              .arrow {
-                padding-left: 1rem;
-                i {
-                  color: var(--text-highlight);
-                  font-size: 1.5rem;
-                }
+          }
+          .pointer {
+            color: var(--text-base);
+            line-height: 1rem;
+            display: flex;
+            align-items: center;
+            .hint {
+              font-size: 0.8rem;
+              font-family: "inter", sans-serif;
+            }
+            .arrow {
+              padding-left: 1rem;
+              i {
+                color: var(--text-highlight);
+                font-size: 1.5rem;
               }
             }
           }
@@ -320,13 +325,15 @@
   .sectionMain {
     .section {
       color: var(--text-base);
-      padding: 0 clamp(1.5rem, 10vw, 5rem);
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 max(1.5rem, min(6vw - 0.05rem));
       .header {
         padding-top: 1rem;
         .divider {
           color: var(--text-base);
           background-color: var(--text-base);
-          height: 2px;
+          height: 1px;
         }
         .info {
           padding-top: 0.75rem;
@@ -343,7 +350,7 @@
         a {
           text-decoration: none;
           .label {
-            font-size: 10rem;
+            font-size: 3rem;
             color: var(--text-base);
           }
         }
@@ -357,5 +364,31 @@
     #sectionProjects {
     }
     */
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    .content {
+      height: 76dvh;
+      .container {
+        .inner {
+          flex-direction: row;
+          gap: 0rem;
+          .info {
+            .label {
+              font-size: clamp(5.5rem, 8vw, 10rem);
+              .description {
+                text-align: end;
+              }
+            }
+            .socials {
+              align-items: end;
+              justify-content: end;
+            }
+          }
+        }
+      }
+    }
   }
 }

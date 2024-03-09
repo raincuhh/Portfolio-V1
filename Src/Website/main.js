@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   let header = document.querySelector(".topHeader");
   pagePreLoader();
-  function dropDownHeader() {
+  function downHeader() {
     setTimeout(() => {
       gsap.to(header, {
         y: 0,
@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }, 3270);
   }
-  dropDownHeader();
+  downHeader();
 });
 
 window.onbeforeunload = () => {
@@ -139,8 +139,8 @@ function toggleNavbar() {
 
 function shadeClosing() {
   navbarShade.removeEventListener("click", shadeClosing);
-  //slight delay problem when i click shade then trying to open navbar again
-  console.log("clickedShade");
+  //slight delay problem when i click shade then trying to open navbar again //nvm fixed
+  //console.log("clickedShade");
   closeNavbar();
 }
 
@@ -188,7 +188,7 @@ function openNavbar() {
     );
 
   menuOpen = true;
-  console.log(menuOpen);
+  //console.log(menuOpen);
 }
 
 function closeNavbar() {
@@ -235,7 +235,11 @@ function closeNavbar() {
       "-=0.5"
     );
   menuOpen = false;
-  console.log(menuOpen);
+  //console.log(menuOpen);
+}
+
+function interpolateValues(startValue, endValue, progress) {
+  return startValue + (endValue - startValue) * progress;
 }
 
 /*
@@ -289,7 +293,3 @@ function toggleNavbar() {
   }
 }
 */
-
-function interpolateValues(startValue, endValue, progress) {
-  return startValue + (endValue - startValue) * progress;
-}
