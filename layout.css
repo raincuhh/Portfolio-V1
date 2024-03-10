@@ -301,14 +301,14 @@
       max-width: 120rem;
       .heroTitle {
         color: var(--text-base);
-        line-height: clamp(6.5rem, 14vw, 17rem);
+        line-height: clamp(4rem, 15vw, 16rem);
         padding-bottom: 2.5rem;
         .heroTitleText {
           width: 100%;
           display: flex;
           justify-content: space-between;
           font-family: "roboto", sans-serif;
-          font-size: max(4rem, min(11.299vw + 2rem, 18rem));
+          font-size: max(3.95rem, min(11.299vw + 2rem, 18rem));
           letter-spacing: -0.15rem;
         }
         .heroTitleText:nth-child(2) {
