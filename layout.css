@@ -309,7 +309,7 @@
           justify-content: space-between;
           font-family: "roboto", sans-serif;
           font-size: max(3.95rem, min(11.299vw + 2rem, 18rem));
-          letter-spacing: -0.15rem;
+          letter-spacing: -0.17rem;
         }
         .heroTitleText:nth-child(2) {
           display: flex;
