@@ -219,9 +219,9 @@
           flex-direction: column;
           justify-content: space-between;
           font-size: 1rem;
-          padding-bottom: 5rem;
+          padding-bottom: 2rem;
           .title {
-            margin-bottom: 3.5rem;
+            padding: 4rem 0 1rem;
           }
           .contactInfo {
             display: flex;
@@ -243,7 +243,7 @@
             pointer-events: none;
             margin-bottom: 1rem;
             color: var(--text-base);
-            font-size: 5rem;
+            font-size: clamp(4rem, 4vw, 5rem);
             font-family: "vogue", sans-serif;
             .description {
               text-align: start;
@@ -293,23 +293,21 @@
     min-height: 100dvh;
     display: flex;
     align-items: center;
-
     .container {
       width: 100%;
       margin: 0 auto;
-      padding: 8rem max(1.5rem, min(6vw - 0.05rem)) 0;
-
+      padding: 5rem max(1.5rem, min(6vw - 0.05rem)) 0;
       max-width: 120rem;
       .heroTitle {
         color: var(--text-base);
         line-height: clamp(6.5rem, 14vw, 17rem);
-        padding-bottom: clamp(2rem, 10vw, 3rem);
+        padding-bottom: 2.5rem;
         .heroTitleText {
           width: 100%;
           display: flex;
           justify-content: space-between;
           font-family: "roboto", sans-serif;
-          font-size: max(5rem, min(13vw + 2rem, 18rem));
+          font-size: max(4.5rem, min(13vw + 2rem, 18rem));
           letter-spacing: -0.15rem;
         }
         .heroTitleText:nth-child(2) {
@@ -318,12 +316,11 @@
           justify-content: end;
         }
       }
-
       .heroDescription {
         .description {
           display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
+          flex-direction: row;
+          gap: 1rem;
 
           .descriptionInner {
             color: var(--text-highlight);
@@ -340,19 +337,21 @@
             }
           }
           .pointer {
-            color: var(--text-base);
-            line-height: 1rem;
-            display: flex;
-            align-items: center;
-            .hint {
-              font-size: 0.8rem;
-              font-family: "inter", sans-serif;
-            }
-            .arrow {
-              padding-left: 1rem;
-              i {
-                color: var(--text-highlight);
-                font-size: 2rem;
+            .pointerInner {
+              color: var(--text-base);
+              line-height: 1rem;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              .hint {
+                font-size: 0.8rem;
+                font-family: "inter", sans-serif;
+              }
+              .arrow {
+                i {
+                  color: var(--text-highlight);
+                  font-size: 2rem;
+                }
               }
             }
           }
@@ -413,6 +412,11 @@
         .inner {
           flex-direction: row;
           gap: 0rem;
+          .contact {
+            .title {
+              padding: 0 0 1rem;
+            }
+          }
           .info {
             .label {
               font-size: clamp(5.5rem, 8vw, 10rem);
@@ -424,6 +428,20 @@
               align-items: end;
               justify-content: end;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .layout {
+    .sectionHero {
+      .container {
+        .heroDescription {
+          .description {
+            flex-direction: column;
           }
         }
       }
