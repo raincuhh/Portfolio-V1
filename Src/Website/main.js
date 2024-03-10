@@ -8,9 +8,20 @@ window.addEventListener("DOMContentLoaded", () => {
         ease: "power4.inout",
       });
     }, 3270);
+
+    setTimeout(() => {
+      window.onscroll = () => {
+        let root = document.documentElement;
+        gsap.to(root, {
+          duration: 0.5,
+          ease: "power1.inout",
+          "--text-base": "var(--text-119)",
+        });
+        //root.style.setProperty("--text-base", "var(--text-119)");
+      };
+    }, 3270);
   }
   downHeader();
-
   setTimeout(() => {
     setInterval(iterateThroughThingsIDevelop, 2000);
   }, 2000);

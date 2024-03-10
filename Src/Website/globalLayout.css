@@ -28,7 +28,9 @@
   --brand-positive-subdued: rgb(95, 53, 143);
 
   --bg-base: #0e0e10;
-  --text-base: rgb(119, 119, 119);
+  --text-inactive: rgb(50, 50, 50);
+  --text-119: rgb(119, 119, 119);
+  --text-base: var(--text-inactive);
   --text-highlight: rgb(170, 170, 170);
 
   --footer-text: var(--bg-base);

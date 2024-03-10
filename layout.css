@@ -199,10 +199,9 @@
     clip-path: polygon(0 0, 100% 0, 100% var(--nl), 0 var(--nr));
     cursor: pointer;
     color: var(--text-base);
-    font-family: "Inter", sans-serif;
+    font-family: "hind", sans-serif;
     font-size: 1rem;
-    text-transform: uppercase;
-
+    line-height: 1rem;
     pointer-events: all;
 
     .container {
@@ -244,6 +243,7 @@
         .info {
           display: flex;
           flex-direction: column;
+          line-height: 3rem;
           .label {
             pointer-events: none;
             margin-bottom: 1rem;
@@ -415,6 +415,7 @@
   }
   .sectionFooter {
     background-color: var(--bg-base);
+
     color: var(--text-base);
     /*
     margin-top: max(2rem, min(1vw + 2rem, 4rem));
