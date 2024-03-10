@@ -207,7 +207,7 @@
       flex-direction: column;
       justify-content: center;
       width: 100%;
-      padding-bottom: 4rem;
+      padding-bottom: 2rem;
       .inner {
         display: flex;
         flex-direction: column;
@@ -308,7 +308,7 @@
           display: flex;
           justify-content: space-between;
           font-family: "roboto", sans-serif;
-          font-size: max(4.5rem, min(13vw + 2rem, 18rem));
+          font-size: max(4rem, min(11.299vw + 2rem, 18rem));
           letter-spacing: -0.15rem;
         }
         .heroTitleText:nth-child(2) {
