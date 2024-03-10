@@ -245,7 +245,8 @@
             margin-bottom: 1rem;
             color: var(--text-base);
             font-size: clamp(4rem, 4vw, 5rem);
-            font-family: "vogue", sans-serif;
+            font-family: "roboto", sans-serif;
+            text-transform: lowercase;
             .description {
               text-align: start;
             }
@@ -302,7 +303,7 @@
       .heroTitle {
         color: var(--text-base);
         line-height: clamp(4rem, 15vw, 16rem);
-        padding-bottom: 2.5rem;
+        padding-bottom: 2rem;
         .heroTitleText {
           width: 100%;
           display: flex;
@@ -327,10 +328,10 @@
             color: var(--text-highlight);
             font-size: 1rem;
             font-family: "hind", sans-serif;
-            width: 15rem;
+            width: 50%;
             line-height: 1rem;
             .descriptionHeader {
-              padding-right: 0.5rem;
+              padding-right: 0.2rem;
               color: var(--text-base);
               font-size: 0.8rem;
               font-family: "inter", sans-serif;
@@ -348,12 +349,6 @@
                 font-size: 0.8rem;
                 font-family: "inter", sans-serif;
                 font-weight: 700;
-              }
-              .arrow {
-                i {
-                  color: var(--text-highlight);
-                  font-size: 2rem;
-                }
               }
             }
           }
@@ -474,6 +469,15 @@
               justify-content: end;
             }
           }
+        }
+      }
+    }
+  }
+  .layout {
+    .sectionHero {
+      .container {
+        .heroTitle {
+          padding-bottom: 1rem;
         }
       }
     }
