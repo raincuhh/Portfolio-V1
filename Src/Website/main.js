@@ -10,21 +10,29 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 3270);
   }
   downHeader();
+
+  setTimeout(() => {
+    setInterval(iterateThroughThingsIDevelop, 2000);
+  }, 2000);
 });
 
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
 
-/* //make this in the main timeline
-window.onscroll = () => {
-  let header = document.querySelector(".topHeader");
-  gsap.to(header, {
-    y: "-100",
-    ease: "power4.inout",
-  });
-};
-*/
+let animatedSpanWords = ["websites", "apps", "games", "ux/ui", "things"];
+let animatedSpanWordCurrentIndex = 0;
+
+function iterateThroughThingsIDevelop() {
+  let animatedSpan = document.querySelector("#animatedBitSpan");
+
+  //console.log(animatedSpanWords[animatedSpanWordCurrentIndex]);
+  animatedSpan.innerHTML = animatedSpanWords[animatedSpanWordCurrentIndex];
+
+  animatedSpanWordCurrentIndex =
+    (animatedSpanWordCurrentIndex + 1) % animatedSpanWords.length;
+  //animatedSpan.innerHTML = words[Math.floor(Math.random() * 4)];
+}
 
 function pagePreLoader() {
   let logo = document.querySelector(".preLoader .logoFrame");
@@ -171,6 +179,7 @@ function openNavbar() {
     .to(
       hamburgerOpen,
       {
+        duration: 0.5,
         x: 170,
         opacity: 0,
         ease: "power4.inOut",
@@ -180,6 +189,7 @@ function openNavbar() {
     .to(
       hamburgerClosed,
       {
+        duration: 0.5,
         x: 0,
         opacity: 1,
         ease: "power4.inOut",
@@ -219,6 +229,7 @@ function closeNavbar() {
     .to(
       hamburgerOpen,
       {
+        duration: 0.5,
         x: 0,
         opacity: 1,
         ease: "power4.inOut",
@@ -228,6 +239,7 @@ function closeNavbar() {
     .to(
       hamburgerClosed,
       {
+        duration: 0.5,
         x: 170,
         opacity: 0,
         ease: "power4.inOut",

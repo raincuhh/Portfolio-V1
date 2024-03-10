@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filip Ryan .dev</title>
+    <title>filipryan.dev</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="Src/Assets/faviconAssets/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Src/Assets/faviconAssets/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Src/Assets/faviconAssets/favicon.ico"
+    />
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -14,7 +32,6 @@
   </head>
   <body>
     <div class="root">
-      <!-- fixed -->
       <div class="preLoader">
         <div class="placeholderFrame"></div>
         <div class="grayFrame"></div>
@@ -25,25 +42,27 @@
       </div>
 
       <header class="topHeader">
-        <div class="left">
-          <button class="leftInner" onclick="window.location.reload()">
-            <div class="label">Filip Ryan /</div>
-          </button>
-        </div>
-        <div class="right">
-          <button class="hamburger" id="navbarToggleButton">
-            <div class="inner">
-              <div class="hamburgerOpen">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+        <div class="container">
+          <div class="left">
+            <button class="leftInner" onclick="window.location.reload()">
+              <div class="label">filipryan.dev</div>
+            </button>
+          </div>
+          <div class="right">
+            <button class="hamburger" id="navbarToggleButton">
+              <div class="inner">
+                <div class="hamburgerOpen">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+                <div class="hamburgerClosed">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
               </div>
-              <div class="hamburgerClosed">
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -96,7 +115,9 @@
         </div>
       </nav>
 
-      <!--<div class="progressBar">w</div>-->
+      <div class="arrow"></div>
+
+      <div class="progressBar"></div>
 
       <!-- main -->
 
@@ -107,17 +128,23 @@
               <div class="heroTitleText">filip ryan</div>
               <div class="heroTitleText">paulsen</div>
             </div>
-            <div class="heroDescription">
-              <div class="description">
-                <span class="descriptionInner">
-                  <span class="descriptionHeader">bullet</span>
-                  Hi, im Filip, i like to develop <span>websites</span>
-                </span>
-                <div class="pointer">
-                  <div class="pointerInner">
-                    <span class="arrow">
-                      <i class="bx bx-subdirectory-right"></i>
-                    </span>
+            <div class="heroSubtext">
+              <div class="subtextContainer">
+                <div class="infoBit" id="infoBit1">
+                  <div class="bitContainer">
+                    <span class="bitHeader">bullet</span>
+                    Hi, im Filip, i like to develop
+                    <span id="animatedBitSpan">websites</span>
+                  </div>
+                  <div class="pointer">
+                    <i class="bx bx-subdirectory-right"></i>
+                  </div>
+                </div>
+                <div class="infoBit" id="infoBit2">
+                  <div class="bitContainer">
+                    <span class="bitHeader">bullet</span>
+                    Striving to innovate in digital experiences through my
+                    passion for coding and programming.
                   </div>
                 </div>
               </div>

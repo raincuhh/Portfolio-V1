@@ -36,6 +36,8 @@
 
   --transition-hover-base: all ease-in-out 100ms;
 
+  --max-content-width: 120rem;
+
   --nl: 0%; /*100%;*/
   --nr: 0%; /*86%;*/
 
