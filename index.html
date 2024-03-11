@@ -3,33 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>filipryan.dev</title>
+    <title>filipryan.dev | home</title>
     <link
       rel="icon"
       type="image/png"
-      href="Src/Assets/faviconAssets/favicon-32x32.png"
+      href="assets/favicon-32x32.png"
       sizes="32x32"
     />
     <link
       rel="icon"
       type="image/png"
-      href="Src/Assets/faviconAssets/favicon-16x16.png"
+      href="assets/favicon-16x16.png"
       sizes="16x16"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      href="Src/Assets/faviconAssets/favicon.ico"
-    />
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
 
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="layout.css" />
-    <link rel="stylesheet" href="Src/Website/globalLayout.css" />
-    <link rel="stylesheet" href="Src/Website/fonts.css" />
-    <link rel="stylesheet" href="Src/Website/constants.css" />
+    <link rel="stylesheet" href="global/globalLayout.css" />
+    <link rel="stylesheet" href="global/fonts.css" />
+    <link rel="stylesheet" href="global/constants.css" />
   </head>
   <body>
     <div class="root">
@@ -38,7 +34,7 @@
         <div class="grayFrame"></div>
         <div class="blackFrame"></div>
         <div class="logoFrame">
-          <img src="Src/Assets/FRLOGO.png" alt="FR" class="logo" />
+          <img src="assets/frLogo.png" alt="FR" class="logo" />
         </div>
       </div>
       <header class="topHeader">
@@ -110,8 +106,6 @@
         <div class="cursorDot" data-cursor-dot></div>
         <div class="cursorOutline" data-cursor-outline></div>
       </div>
-      <div class="arrow"></div>
-
       <div class="progressBar"></div>
 
       <!-- main -->
@@ -147,32 +141,7 @@
           </div>
         </section>
         <section class="sectionMain">
-          <div class="container">
-            <section class="section" id="sectionCv">
-              <div class="header"></div>
-              <div class="innerSection">
-                <a href="Src/Website/cv/cv.html">
-                  <span class="label"></span>
-                </a>
-              </div>
-            </section>
-            <section class="section" id="sectionAbout">
-              <div class="header"></div>
-              <div class="innerSection">
-                <a href="Src/Website/aboutme/aboutme.html">
-                  <span class="label"></span>
-                </a>
-              </div>
-            </section>
-            <section class="section" id="sectionProjects ">
-              <div class="header"></div>
-              <div class="innerSection">
-                <a href="Src/Website/projects/projects.html">
-                  <span class="label"></span>
-                </a>
-              </div>
-            </section>
-          </div>
+          <div class="container">main</div>
         </section>
         <section class="sectionFooter">
           <div class="container">
@@ -210,7 +179,7 @@
                 </a>
               </div>
               <div class="privacy">
-                <a href="Src/Website/privacyPolicy/page.html">
+                <a href="legal/privacyPolicy/privacyPolicy.html">
                   privacy Policy
                 </a>
               </div>
@@ -223,7 +192,7 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- main js -->
-    <script type="module" src="Src/Website/main.js"></script>
-    <script src="Src/Website/constants.js"></script>
+    <script type="module" src="index.js"></script>
+    <script src="global/constants.js"></script>
   </body>
 </html>

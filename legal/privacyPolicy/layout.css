@@ -11,7 +11,7 @@
       max-width: var(--max-content-width);
 
       .header {
-        padding: max(1rem, min(3vw - 0.05rem)) 0 0;
+        padding: 1rem 0 0;
         color: var(--text-base);
         font-family: "hind", sans-serif;
         font-size: 2rem;
@@ -32,6 +32,13 @@
       }
       .orderedList {
         padding-left: 2rem;
+      }
+      ul {
+        padding-left: 2rem;
+        li {
+          font-family: "hind", sans-serif;
+          font-size: 1rem;
+        }
       }
     }
   }
