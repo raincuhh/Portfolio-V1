@@ -567,3 +567,16 @@ body {
     }
   }
 }
+@media (max-width: 475px) {
+  .layout {
+    .sectionFooter {
+      .container {
+        .legals {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}
