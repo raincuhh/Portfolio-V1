@@ -12,11 +12,26 @@
 
       .header {
         padding: max(1rem, min(3vw - 0.05rem)) 0 0;
-        color: var(--text-highlight);
-        font-family: "inter", sans-serif;
+        color: var(--text-base);
+        font-family: "hind", sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
       }
       .paragraph {
         padding: max(1rem, min(1vw - 0.05rem)) 0;
+        font-family: "hind", sans-serif;
+        font-size: 1rem;
+
+        a {
+          color: var(--text-base);
+          transition: var(--transition-hover-base);
+        }
+        a:hover {
+          color: var(--text-highlight);
+        }
+      }
+      .orderedList {
+        padding-left: 2rem;
       }
     }
   }

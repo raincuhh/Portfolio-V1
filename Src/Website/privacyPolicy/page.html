@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>filipryan.dev | privacy policy</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="Src/Assets/faviconAssets/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Src/Assets/faviconAssets/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Src/Assets/faviconAssets/favicon.ico"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/Src/Website/privacyPolicy/layout.css" />
     <link rel="stylesheet" href="/Src/Website/globalLayout.css" />
     <link rel="stylesheet" href="/Src/Website/fonts.css" />
@@ -12,12 +36,20 @@
   <body>
     <div class="root">
       <!--fixed-->
+      <div class="preLoader">
+        <div class="placeholderFrame"></div>
+        <div class="grayFrame"></div>
+        <div class="blackFrame"></div>
+        <div class="logoFrame">
+          <img src="/Src/Assets/FRLOGO.png" alt="FR" class="logo" />
+        </div>
+      </div>
       <header class="topHeader">
         <div class="container">
           <div class="left">
-            <button class="leftInner" onclick="window.location.reload()">
+            <a class="leftInner" href="/index.html">
               <div class="label">filipryan.dev</div>
-            </button>
+            </a>
           </div>
           <div class="right">
             <button class="hamburger" id="navbarToggleButton">
@@ -126,7 +158,7 @@
         <section class="section">
           <div class="container">
             <header class="header">Table of contents</header>
-            <ol class="paragraph">
+            <ol class="paragraph orderedList">
               <li>
                 <a href="#collection-of-information">
                   Collection of information
