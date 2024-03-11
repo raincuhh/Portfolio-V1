@@ -1,7 +1,7 @@
 .layout {
   background-color: var(--bg-base);
   color: var(--text-base);
-  padding-top: clamp(4rem, 7vw, 8rem);
+  padding: clamp(4rem, 7vw, 8rem) 0;
 
   .section {
     .container {
