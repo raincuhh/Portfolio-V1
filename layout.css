@@ -294,28 +294,6 @@ body {
   color: var(--text-base);
 }
 
-.cursorDot {
-  width: 5px;
-  height: 5px;
-  background-color: white;
-}
-.cursorOutline {
-  width: 30px;
-  height: 30px;
-  border: 2px solid hsla(0, 0%, 100%, 0.3);
-}
-
-.cursorDot,
-.cursorOutline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 2000;
-  pointer-events: none;
-}
-
 /* main */
 
 .layout {
@@ -542,15 +520,6 @@ body {
         }
       }
     }
-  }
-}
-@media (max-width: 768px) {
-  [data-cursor-dot],
-  [data-cursor-outline] {
-    display: none;
-  }
-  body {
-    cursor: pointer;
   }
 }
 

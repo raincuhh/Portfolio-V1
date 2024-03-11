@@ -1,0 +1,23 @@
+.layout {
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  padding-top: clamp(4rem, 7vw, 8rem);
+
+  .section {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 max(1rem, min(6vw - 0.05rem));
+      max-width: var(--max-content-width);
+
+      .header {
+        padding: max(1rem, min(3vw - 0.05rem)) 0 0;
+        color: var(--text-highlight);
+        font-family: "inter", sans-serif;
+      }
+      .paragraph {
+        padding: max(1rem, min(1vw - 0.05rem)) 0;
+      }
+    }
+  }
+}

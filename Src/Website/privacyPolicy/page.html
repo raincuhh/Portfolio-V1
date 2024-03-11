@@ -5,9 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>filipryan.dev | privacy policy</title>
     <link rel="stylesheet" href="/Src/Website/privacyPolicy/layout.css" />
+    <link rel="stylesheet" href="/Src/Website/globalLayout.css" />
+    <link rel="stylesheet" href="/Src/Website/fonts.css" />
+    <link rel="stylesheet" href="/Src/Website/constants.css" />
   </head>
   <body>
     <div class="root">
+      <!--fixed-->
+      <header class="topHeader">
+        <div class="container">
+          <div class="left">
+            <button class="leftInner" onclick="window.location.reload()">
+              <div class="label">filipryan.dev</div>
+            </button>
+          </div>
+          <div class="right">
+            <button class="hamburger" id="navbarToggleButton">
+              <div class="inner">
+                <div class="hamburgerOpen">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+                <div class="hamburgerClosed">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </header>
+      <nav class="navbar">
+        <div class="shade"></div>
+        <div class="content">
+          <div class="container">
+            <div class="inner">
+              <section class="contact">
+                <header class="title">Say hello</header>
+                <section class="contactInfo">
+                  <p class="contactTitle">Info</p>
+                  <a href="tel:+4792081617"> (+47) 920 81 617 </a>
+                  <a href="mailto:filipryanbusinessmail@gmail.com">
+                    filipryanbusinessmail@gmail.com
+                  </a>
+                </section>
+              </section>
+              <section class="info">
+                <header class="label">
+                  <div class="description">Get in touch</div>
+                </header>
+                <div class="socials">
+                  <div class="social" id="linkedin">
+                    <a href="#">
+                      <i class="bx bxl-linkedin"></i>
+                    </a>
+                  </div>
+                  <div class="social" id="github">
+                    <a href="https://github.com/raincuhh">
+                      <i class="bx bxl-github"></i>
+                    </a>
+                  </div>
+                  <div class="social" id="codepen">
+                    <a href="https://codepen.io/filip-ryan">
+                      <i class="bx bxl-codepen"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="cursor">
+        <div class="cursorDot" data-cursor-dot></div>
+        <div class="cursorOutline" data-cursor-outline></div>
+      </div>
+      <!--main-->
       <div class="layout">
         <section class="section">
           <div class="container">
@@ -419,5 +494,10 @@
         </section>
       </div>
     </div>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- js -->
+    <script src="/Src/Website/privacyPolicy/privacyPolicy.js"></script>
+    <script src="/Src/Website/constants.js"></script>
   </body>
 </html>
