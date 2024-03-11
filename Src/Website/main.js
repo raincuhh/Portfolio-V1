@@ -186,7 +186,6 @@ function toggleNavbar() {
 
 function shadeClosing() {
   navbarShade.removeEventListener("click", shadeClosing);
-  //slight delay problem when i click shade then trying to open navbar again //nvm fixed
   //console.log("clickedShade");
   closeNavbar();
 }

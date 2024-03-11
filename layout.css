@@ -473,7 +473,7 @@ body {
         .copyright {
           a {
             color: var(--text-base);
-            font-size: 1rem;
+            font-size: clamp(0.8rem, 4vw, 1rem);
             font-family: "hind", sans-serif;
             text-decoration: none;
             .copyrightDate {
@@ -487,7 +487,7 @@ body {
         }
         .privacy {
           a {
-            font-size: 1rem;
+            font-size: clamp(0.8rem, 4vw, 1rem);
             font-family: "hind", sans-serif;
             color: var(--text-base);
             text-decoration: none;
@@ -567,6 +567,7 @@ body {
     }
   }
 }
+
 @media (max-width: 475px) {
   .layout {
     .sectionFooter {
@@ -574,7 +575,7 @@ body {
         .legals {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: clamp(0.25rem, 4vw, 0.5rem);
         }
       }
     }
