@@ -168,8 +168,8 @@
       .legals {
         width: 100%;
         display: flex;
-        justify-content: space-between;
         .copyright {
+          padding-right: .5rem;
           a {
             color: var(--text-base);
             font-size: clamp(0.8rem, 4vw, 1rem);
@@ -258,6 +258,7 @@
   }
 }
 
+/*
 @media (max-width: 475px) {
   .layout {
     .sectionFooter {
