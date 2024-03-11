@@ -2,23 +2,23 @@ window.addEventListener("DOMContentLoaded", () => {
   let header = document.querySelector(".topHeader");
   pagePreLoader();
   function downHeader() {
+    window.onscroll = () => {
+      let root = document.documentElement;
+      gsap.to(root, {
+        duration: 0.3,
+        ease: "power4.inout",
+
+        "--text-inactive-r": 119,
+        "--text-inactive-g": 119,
+        "--text-inactive-b": 119,
+      });
+      //root.style.setProperty("--text-base", "var(--text-119)");
+    };
     setTimeout(() => {
       gsap.to(header, {
         y: 0,
         ease: "power4.inout",
       });
-    }, 3270);
-
-    setTimeout(() => {
-      window.onscroll = () => {
-        let root = document.documentElement;
-        gsap.to(root, {
-          duration: 0.5,
-          ease: "power1.inout",
-          "--text-base": "var(--text-119)",
-        });
-        //root.style.setProperty("--text-base", "var(--text-119)");
-      };
     }, 3270);
   }
   downHeader();
@@ -44,6 +44,34 @@ function iterateThroughThingsIDevelop() {
     (animatedSpanWordCurrentIndex + 1) % animatedSpanWords.length;
   //animatedSpan.innerHTML = words[Math.floor(Math.random() * 4)];
 }
+
+const cursorDot = document.querySelector("[data-cursor-dot]");
+const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+window.addEventListener("mousemove", function (e) {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  //console.log(posX);
+  //console.log(posY);
+
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+
+  //cursorOutline.style.left = `${posX}px`;
+  //cursorOutline.style.top = `${posY}px`;
+
+  cursorOutline.animate(
+    {
+      left: `${posX}px`,
+      top: `${posY}px`,
+    },
+    {
+      duration: 500,
+      fill: "forwards",
+    }
+  );
+});
 
 function pagePreLoader() {
   let logo = document.querySelector(".preLoader .logoFrame");
@@ -316,3 +344,18 @@ function toggleNavbar() {
   }
 }
 */
+
+//idea, make footer copyright present year a gsap scrolltrigger from earliest copyright date to newest
+//for example it scrolls like  ©2024-2024>2025>2026...
+
+function changeCopyrightPresentYear() {
+  const date = new Date();
+  let currentYear = date.getFullYear();
+  let copyrightPresentYearSpan = document.querySelector(
+    "#copyrightPresentYear"
+  );
+
+  copyrightPresentYearSpan.innerHTML = currentYear;
+}
+
+changeCopyrightPresentYear();

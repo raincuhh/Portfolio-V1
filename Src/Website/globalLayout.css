@@ -5,12 +5,14 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 :root {
   --bg-lowest: rgba(0, 0, 0);
+
+  --navbar-base: rgb(16, 16, 16);
   /*
-  --bg-base: rgba(18, 18, 18);
   --bg-highlight: rgba(26, 26, 26);
   */
   --bg-elevated-base: #242424;
@@ -28,10 +30,22 @@
   --brand-positive-subdued: rgb(95, 53, 143);
 
   --bg-base: #0e0e10;
-  --text-inactive: rgb(50, 50, 50);
-  --text-119: rgb(119, 119, 119);
-  --text-base: var(--text-inactive);
+  --text-base: rgb(
+    var(--text-inactive-r),
+    var(--text-inactive-g),
+    var(--text-inactive-b)
+  );
   --text-highlight: rgb(170, 170, 170);
+
+  /*
+  --text-base-r: 50;
+  --text-base-g: 50;
+  --text-base-b: 50;
+  */
+
+  --text-inactive-r: 50;
+  --text-inactive-g: 50;
+  --text-inactive-b: 50;
 
   --footer-text: var(--bg-base);
   --footer-bg: #feffec;
