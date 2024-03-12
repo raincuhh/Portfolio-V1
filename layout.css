@@ -129,12 +129,7 @@
     }
 
     /*
-    #sectionCv {
-    }
-    #sectionAbout {
-    }
-    #sectionProjects {
-    }
+    
     */
   }
   .sectionFooter {
@@ -159,7 +154,7 @@
             }
             a:hover {
               i {
-                color: var(--text-highlight);
+                color: var(--text-hover);
               }
             }
           }
@@ -176,13 +171,10 @@
             font-family: "hind", sans-serif;
             text-decoration: none;
             .copyrightDate {
-              font-size: 0.8rem;
+              font-size: 0.9rem;
               font-weight: 700;
             }
           }
-        }
-        .copyright:hover {
-          text-decoration: underline;
         }
         .privacy {
           a {
@@ -195,6 +187,7 @@
         .privacy:hover {
           a {
             text-decoration: underline;
+            color: var(--text-hover);
           }
         }
       }

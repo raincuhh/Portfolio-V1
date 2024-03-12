@@ -2,17 +2,6 @@ window.addEventListener("DOMContentLoaded", () => {
   pagePreLoader();
 
   function downHeader() {
-    window.onscroll = () => {
-      let root = document.documentElement;
-      gsap.to(root, {
-        duration: 0.3,
-        ease: "power4.inout",
-        "--text-inactive-r": 119,
-        "--text-inactive-g": 119,
-        "--text-inactive-b": 119,
-      });
-    };
-
     let header = document.querySelector(".topHeader");
     setTimeout(() => {
       gsap.to(header, {
@@ -22,6 +11,29 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 3270);
   }
   downHeader();
+
+  function changeFontColor() {
+    setTimeout(() => {
+      window.onscroll = () => {
+        let root = document.documentElement;
+        gsap.to(root, {
+          duration: 1,
+          ease: "power4.inout",
+
+          //sets text base color to 119
+          "--text-inactive-r": 125,
+          "--text-inactive-g": 125,
+          "--text-inactive-b": 125,
+
+          //sets hover color reverse of text base, aka rgb(50,50,50)
+          "--text-highlight-r": 50,
+          "--text-highlight-g": 50,
+          "--text-highlight-b": 50,
+        });
+      };
+    }, 3270);
+  }
+  changeFontColor();
 });
 
 //preloader
@@ -95,6 +107,7 @@ window.onbeforeunload = () => {
 function cursor() {
   const cursorDot = document.querySelector("[data-cursor-dot]");
   const cursorOutline = document.querySelector("[data-cursor-outline]");
+  const hoverableElements = document.querySelectorAll(".hoverableElement");
 
   window.addEventListener("mousemove", function (e) {
     const posX = e.clientX;
@@ -115,10 +128,49 @@ function cursor() {
         top: `${posY}px`,
       },
       {
-        duration: 500,
+        duration: 650,
         fill: "forwards",
       }
     );
+  });
+
+  let cursorTimeout;
+
+  hoverableElements.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      clearTimeout(cursorTimeout);
+      cursorTimeout = setTimeout(() => {
+        gsap.to(cursorDot, {
+          duration: 0.3,
+          width: 0,
+          height: 0,
+          ease: "power4.inout",
+        });
+        gsap.to(cursorOutline, {
+          duration: 0.3,
+          width: 60,
+          height: 60,
+          ease: "power4.inout",
+        });
+      }, 10);
+    });
+    element.addEventListener("mouseleave", () => {
+      clearTimeout(cursorTimeout);
+      cursorTimeout = setTimeout(() => {
+        gsap.to(cursorDot, {
+          duration: 0.3,
+          width: 5,
+          height: 5,
+          ease: "power4.inout",
+        });
+        gsap.to(cursorOutline, {
+          duration: 0.3,
+          width: 30,
+          height: 30,
+          ease: "power4.inout",
+        });
+      }, 10);
+    });
   });
 }
 cursor();

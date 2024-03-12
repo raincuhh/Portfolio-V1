@@ -4,17 +4,17 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 2000);
 });
 
-let animatedSpanWords = ["websites", "apps", "games", "ux/ui", "things"];
-let animatedSpanWordCurrentIndex = 0;
+let animatedWords = ["websites", "apps", "games", "ux/ui", "things"];
+let animatedWordsCurrentIndex = 0;
 
 function iterateThroughThingsIDevelop() {
   let animatedSpan = document.querySelector("#animatedBitSpan");
 
   //console.log(animatedSpanWords[animatedSpanWordCurrentIndex]);
-  animatedSpan.innerHTML = animatedSpanWords[animatedSpanWordCurrentIndex];
+  animatedSpan.innerHTML = animatedWords[animatedWordsCurrentIndex];
 
-  animatedSpanWordCurrentIndex =
-    (animatedSpanWordCurrentIndex + 1) % animatedSpanWords.length;
+  animatedWordsCurrentIndex =
+    (animatedWordsCurrentIndex + 1) % animatedWords.length;
   //animatedSpan.innerHTML = words[Math.floor(Math.random() * 4)];
 }
 

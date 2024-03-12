@@ -25,11 +25,19 @@
     var(--text-inactive-g),
     var(--text-inactive-b)
   );
-  --text-highlight: rgb(130, 130, 130);
+  --text-hover: rgb(
+    var(--text-highlight-r),
+    var(--text-highlight-g),
+    var(--text-highlight-b)
+  );
 
   --text-inactive-r: 40;
   --text-inactive-g: 40;
   --text-inactive-b: 40;
+
+  --text-highlight-r: 125;
+  --text-highlight-g: 125;
+  --text-highlight-b: 125;
 
   --footer-text: var(--bg-base);
   --footer-bg: #feffec;

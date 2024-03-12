@@ -24,10 +24,9 @@
 
         a {
           color: var(--text-base);
-          transition: var(--transition-hover-base);
         }
         a:hover {
-          color: var(--text-highlight);
+          color: var(--text-hover);
         }
       }
       .orderedList {

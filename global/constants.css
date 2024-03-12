@@ -156,7 +156,7 @@ body {
     .left:hover {
       .leftInner {
         .label {
-          color: var(--text-highlight);
+          color: var(--text-hover);
         }
       }
     }
@@ -165,12 +165,12 @@ body {
         .inner {
           .hamburgerOpen {
             .line {
-              background-color: var(--text-highlight);
+              background-color: var(--text-hover);
             }
           }
           .hamburgerClosed {
             .line {
-              background-color: var(--text-highlight);
+              background-color: var(--text-hover);
             }
           }
         }
@@ -245,7 +245,7 @@ body {
               */
             }
             a:hover {
-              color: var(--text-highlight);
+              color: var(--text-hover);
             }
           }
         }
@@ -281,7 +281,7 @@ body {
               }
               a:hover {
                 i {
-                  color: var(--text-highlight);
+                  color: var(--text-hover);
                 }
               }
             }
