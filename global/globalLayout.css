@@ -47,6 +47,10 @@
   --transition-hover-base: all ease-in-out 100ms;
 
   --max-content-width: 115rem;
+  --padding-base: max(
+    1rem,
+    min(clamp(6vw, 12vw, 14vw) - clamp(0.05rem, 12vw, 1rem))
+  );
 
   --nl: 0%; /*100%;*/
   --nr: 0%; /*86%;*/
