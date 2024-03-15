@@ -39,6 +39,8 @@
   --text-highlight-g: 125;
   --text-highlight-b: 125;
 
+  --text-inactive: rgb(56, 56, 56);
+
   --footer-text: var(--bg-base);
   --footer-bg: #feffec;
 

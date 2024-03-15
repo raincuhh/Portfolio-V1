@@ -273,7 +273,7 @@ body {
               a {
                 i {
                   color: var(--text-base);
-                  font-size: clamp(1.2rem, 6.4vw, 1.5rem);
+                  font-size: clamp(1rem, 6.4vw, 1.25rem);
                   /*
                   transition: var(--transition-hover-base);
                   */
