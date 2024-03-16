@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="global/constants.css" />
   </head>
   <body>
-    <div class="root">
+    <section class="root">
       <div class="preLoader">
         <div class="placeholderFrame"></div>
         <div class="grayFrame"></div>
@@ -111,48 +111,45 @@
         <div class="cursorDot" data-cursor-dot></div>
         <div class="cursorOutline" data-cursor-outline></div>
       </div>
-      <div class="progressBar"></div>
 
       <!-- main -->
 
       <main class="layout">
-        <section class="sectionHero">
+        <section class="hero">
           <div class="container">
-            <div class="heroTitle">
-              <div class="heroTitleText">filip ryan</div>
-              <div class="heroTitleText">paulsen</div>
-            </div>
-            <div class="heroSubtext">
-              <div class="subtextContainer">
-                <div class="infoBit" id="infoBit1">
-                  <div class="bitContainer">
-                    <span class="bitHeader">bullet</span>
+            <section class="title">
+              <div class="heroText">filip ryan</div>
+              <div class="heroText">paulsen</div>
+            </section>
+            <section class="subTitle">
+              <div class="wrapper">
+                <article class="infoBox" id="infoBox1">
+                  <p class="boxContainer">
+                    <span class="header">intro</span>
                     Hi, i'm Filip, i like to develop
-                    <span id="animatedBitSpan">websites</span>
-                  </div>
+                    <span id="infoBoxAnimSpan">websites</span>
+                  </p>
                   <div class="pointer">
                     <i class="bx bx-subdirectory-right"></i>
                   </div>
-                </div>
-                <div class="infoBit" id="infoBit2">
-                  <div class="bitContainer">
-                    <span class="bitHeader">bullet</span>
+                </article>
+                <article class="infoBox" id="infoBox2">
+                  <p class="boxContainer">
+                    <span class="header">intro</span>
                     Striving to innovate in digital experiences through my
                     passion for coding and programming.
-                  </div>
-                </div>
+                  </p>
+                </article>
               </div>
-            </div>
+            </section>
           </div>
         </section>
 
-        <section class="sectionAbout">
+        <section class="about">
           <div class="container">
-            <header class="sectionDescription">
-              <div class="sectionLabel">about</div>
-            </header>
-            <section class="inner">
-              <div class="columnAbout">
+            <header class="sectionHeader">about</header>
+            <div class="wrapper">
+              <article class="aboutContainer">
                 <p>
                   Hey there! I'm Filip, a Filipino-Norwegian with a passion for
                   volleyball, gym sessions, and coding.
@@ -160,7 +157,7 @@
                 <p>
                   I enjoy crafting digital experiences and developing games,
                   channeling my creativity into bringing ideas to life through
-                  pixels and code.
+                  the code that I write.
                 </p>
                 <p>
                   Born in Norway and enriched by my Filipino heritage, my
@@ -171,93 +168,142 @@
                   honing my coding skills, you'll find me hitting the gym or
                   exploring the latest tech innovations.
                 </p>
-              </div>
-              <div class="columnAside">
+              </article>
+              <article class="aboutBeside">
                 <section class="experience">
-                  <header>Experience</header>
-                  <div class="experienceBlock"></div>
+                  <header class="header">experience</header>
+                  <div class="experienceContainer">
+                    <div class="experienceBox">
+                      <p class="date">2022 - 2022</p>
+                      <p class="info">
+                        I worked at a local Mcdonald's during a "work week" in
+                        secondary school
+                      </p>
+                      <p class="position">crew member</p>
+                    </div>
+                  </div>
                 </section>
                 <section class="education">
-                  <header>education</header>
+                  <header class="header">education</header>
+                  <div class="educationContainer">
+                    <div class="educationBox">
+                      <p class="date">2013 - 2020</p>
+                      <p class="institution">åvangen skole</p>
+                      <p class="info">finished primary school education</p>
+                    </div>
+                    <div class="educationBox">
+                      <p class="date">2020 - 2023</p>
+                      <p class="institution">nøkkeland skole</p>
+                      <p class="info">finished secondary school education</p>
+                    </div>
+                    <div class="educationBox">
+                      <p class="date">2023 - now</p>
+                      <p class="institution">kirkeparken vgs</p>
+                      <p class="info">
+                        currently studying computer science & mediaproduction
+                      </p>
+                    </div>
+                  </div>
                 </section>
+                <section class="skills">
+                  <header class="header">skills</header>
+                  <div class="skillsContainer">
+                    <div class="skillsBox">
+                      <div class="skill">html</div>
+                      <div class="icon">
+                        <i class="bx bxl-html5"></i>
+                      </div>
+                    </div>
+                    <div class="skillsBox">
+                      <div class="skill">css</div>
+                      <div class="icon">
+                        <i class="bx bxl-css3"></i>
+                      </div>
+                    </div>
+                    <div class="skillsBox">
+                      <div class="skill">javascript</div>
+                      <div class="icon">
+                        <i class="bx bxl-javascript"></i>
+                      </div>
+                    </div>
+                    <div class="skillsBox">
+                      <div class="skill">gsap</div>
+                      <div class="icon">
+                        <img src="assets/gsap-greensock.svg" alt="gsap" />
+                      </div>
+                    </div>
+                    <div class="skillsBox">
+                      <div class="skill">godot & gdscript</div>
+                      <div class="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 32 32"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M12.745.917c-1.458.328-2.906.781-4.266 1.464a32.09 32.09 0 0 0 .266 3.505c-.526.339-1.078.63-1.568 1.026c-.5.38-1.01.75-1.464 1.198a28.31 28.31 0 0 0-2.849-1.651C1.801 7.6.812 8.834-.001 10.214c.609.99 1.25 1.911 1.938 2.792h.016v8.474a.15.15 0 0 1 .047.005l5.198.5a.554.554 0 0 1 .5.521l.161 2.292l4.531.323l.313-2.115a.56.56 0 0 1 .552-.479h5.484a.56.56 0 0 1 .552.479l.313 2.115l4.531-.323l.161-2.292a.554.554 0 0 1 .505-.521l5.193-.5c.016 0 .031-.005.047-.005v-8.474h.021a29.489 29.489 0 0 0 1.932-2.792c-.807-1.38-1.802-2.615-2.865-3.755A28.99 28.99 0 0 0 26.28 8.11c-.453-.448-.958-.818-1.458-1.198c-.495-.396-1.047-.688-1.573-1.026c.156-1.161.234-2.307.266-3.505c-1.354-.682-2.802-1.135-4.266-1.464A30.66 30.66 0 0 0 17.671 4a11.064 11.064 0 0 0-1.661-.13h-.026c-.552.005-1.109.042-1.661.13A29.889 29.889 0 0 0 12.74.917zm-4.11 12.406a3.134 3.134 0 0 1 3.13 3.135a3.13 3.13 0 1 1-6.26 0a3.134 3.134 0 0 1 3.13-3.135m14.73 0a3.134 3.134 0 0 1 3.13 3.135a3.13 3.13 0 1 1-6.26 0a3.134 3.134 0 0 1 3.13-3.135M8.932 14.568a2.076 2.076 0 1 0 0 4.151a2.077 2.077 0 0 0 2.083-2.073a2.078 2.078 0 0 0-2.083-2.078m14.131 0a2.076 2.076 0 1 0 0 4.151a2.073 2.073 0 0 0 2.078-2.073a2.074 2.074 0 0 0-2.078-2.078M16 15.172c.557 0 1.01.406 1.01.911v2.885c0 .505-.453.917-1.01.917s-1.01-.411-1.01-.917v-2.885c0-.505.453-.911 1.01-.911M1.948 22.599c0 .505.005 1.052.005 1.161c0 4.938 6.26 7.307 14.036 7.333h.021c7.776-.026 14.031-2.396 14.031-7.333l.01-1.161l-4.672.453l-.161 2.307a.556.556 0 0 1-.516.516l-5.578.396a.56.56 0 0 1-.552-.474l-.318-2.156h-4.516l-.318 2.156a.557.557 0 0 1-.594.474l-5.531-.396a.565.565 0 0 1-.521-.516l-.156-2.307l-4.672-.448z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="skillsBox">
+                      <div class="skill">adobe</div>
+                      <div class="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 32 32"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M0 .401v31.198h32V.401zm1.333 1.333h29.333v28.531H1.333zm6.401 5.974c0-.089.188-.156.297-.156a76.42 76.42 0 0 1 3.438-.068c3.698 0 5.135 2.026 5.135 4.62c0 3.391-2.458 4.844-5.469 4.844c-.51 0-.682-.026-1.036-.026v5.125c0 .109-.042.156-.151.156H7.885c-.109 0-.151-.042-.151-.151zm2.365 7.084c.307.021.552.021 1.083.021c1.557 0 3.026-.552 3.026-2.661c0-1.693-1.052-2.552-2.833-2.552c-.526 0-1.031.021-1.276.042zm11.479-1.589c-1.057 0-1.411.531-1.411.969c0 .484.24.813 1.651 1.542c2.089 1.016 2.75 1.979 2.75 3.411c0 2.13-1.63 3.276-3.828 3.276c-1.167 0-2.161-.245-2.734-.573c-.083-.042-.104-.109-.104-.219v-1.958c0-.13.063-.177.151-.109a4.9 4.9 0 0 0 2.682.792c1.057 0 1.495-.438 1.495-1.036c0-.484-.307-.901-1.646-1.604c-1.896-.906-2.688-1.828-2.688-3.37c0-1.719 1.344-3.146 3.672-3.146c1.146 0 1.953.177 2.396.37c.109.068.13.177.13.266v1.828c0 .109-.068.177-.198.13c-.594-.349-1.469-.573-2.323-.573z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv">
+          <div class="container">
+            <header class="sectionHeader">curriculum vitae</header>
+            <article class="cvInner"></article>
+          </div>
+        </section>
+
+        <section class="projects">
+          <div class="container">
+            <header class="sectionHeader">projects</header>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="container">
+            <section class="footerGlobal"></section>
+            <section class="footerLegal">
+              <div class="copyright">
+                <span class="copyrightDate">
+                  ©2024-<span id="copyrightCurrentYear"></span>
+                </span>
+                filipryan.dev - All Rights Reserved.
+              </div>
+              <div class="privacyPolicy hoverableElement">
+                <a href="legal/privacyPolicy/privacyPolicy.html">
+                  privacy policy
+                </a>
               </div>
             </section>
           </div>
-        </section>
-
-        <section class="sectionCurriculumVitae">
-          <div class="container">
-            <header class="sectionDescription">
-              <div class="sectionLabel">curriculum vitae</div>
-            </header>
-            <section class="inner"></section>
-          </div>
-        </section>
-
-        <section class="sectionProjects">
-          <div class="container">
-            <header class="sectionDescription">
-              <div class="sectionLabel">projects</div>
-            </header>
-          </div>
-        </section>
-
-        <section class="sectionFooter">
-          <div class="container">
-            <div class="information">
-              <div class="contact">
-                <header class="contactHeader">contact me</header>
-                <div class="inner">
-                  <a class="hoverableElement" href="tel:+4792081617">
-                    (+47) 920 81 617
-                  </a>
-                  <a
-                    class="hoverableElement"
-                    href="mailto:filipryanbusinessmail@gmail.com"
-                  >
-                    filipryanbusinessmail@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div class="socials">
-                <header class="socialsHeader">find me on</header>
-                <div class="social">
-                  <a href="#" id="linkedin">
-                    <i class="bx bxl-linkedin"></i>
-                  </a>
-                </div>
-                <div class="social" id="github">
-                  <a href="https://github.com/raincuhh">
-                    <i class="bx bxl-github"></i>
-                  </a>
-                </div>
-                <div class="social" id="codepen">
-                  <a href="https://codepen.io/filip-ryan">
-                    <i class="bx bxl-codepen"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="legals">
-              <div class="copyright">
-                <a>
-                  <span class="copyrightDate"
-                    >©2024-<span id="copyrightPresentYear"></span>
-                  </span>
-                  filipryan.dev - All Rights Reserved.
-                </a>
-              </div>
-              <div class="privacy hoverableElement">
-                <a href="legal/privacyPolicy/privacyPolicy.html">
-                  privacy Policy
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        </footer>
       </main>
-    </div>
-
+    </section>
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- main js -->

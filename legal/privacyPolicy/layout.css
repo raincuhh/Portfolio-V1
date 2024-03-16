@@ -7,12 +7,12 @@
     .container {
       width: 100%;
       margin: 0 auto;
-      padding: 0 max(1rem, min(6vw - 0.05rem));
+      padding: 3rem var(--padding-base) 0;
       max-width: var(--max-content-width);
 
       .header {
         padding: 0.5rem 0 0;
-        color: var(--text-base);
+        color: var(--text-inactive);
         font-family: "hind", sans-serif;
         font-size: 2rem;
         font-weight: 400;
