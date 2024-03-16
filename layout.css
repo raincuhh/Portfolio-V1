@@ -7,7 +7,9 @@
   background-color: var(--bg-base);
   display: flex;
   flex-direction: column;
+  /*
   gap: clamp(5rem, 12vw, 40rem);
+  */
 
   .sectionHeader {
     font-size: 0.8rem;
@@ -19,10 +21,14 @@
 }
 
 .hero {
-  min-height: 100dvh;
+  height: 100dvh;
   color: var(--text-base);
   .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     padding: 5rem var(--padding-base) 0;
     max-width: var(--max-content-width);
@@ -31,7 +37,7 @@
       padding-bottom: clamp(3rem, 4vh, 4rem);
       .heroText {
         font-family: "roboto", sans-serif;
-        font-size: max(3.9rem, min(11vw + 2rem, 18rem));
+        font-size: max(3.9rem, min(11vw + 1.5rem, 14rem));
         letter-spacing: -0.17rem;
       }
       .heroText:nth-child(2) {
@@ -163,6 +169,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 3rem var(--padding-base);
+    max-width: var(--max-content-width);
   }
 }
 
@@ -172,6 +179,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 3rem var(--padding-base);
+    max-width: var(--max-content-width);
   }
 }
 

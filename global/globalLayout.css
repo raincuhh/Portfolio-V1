@@ -46,7 +46,7 @@
 
   --transition-hover-base: all ease-in-out 100ms;
 
-  --max-content-width: 115rem;
+  --max-content-width: 120rem;
   --padding-base: var(--padding-base-smaller);
   --padding-base-smaller: max(
     1rem,
