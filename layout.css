@@ -24,7 +24,7 @@
   .container {
     width: 100%;
     margin: 0 auto;
-    padding: 5rem var(--padding-base);
+    padding: 5rem var(--padding-base) 0;
     max-width: var(--max-content-width);
     .title {
       line-height: clamp(4rem, 15vw, 14.5rem);
@@ -154,6 +154,24 @@
         }
       }
     }
+  }
+}
+
+.cv {
+  color: var(--text-base);
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem var(--padding-base);
+  }
+}
+
+.projects {
+  color: var(--text-base);
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem var(--padding-base);
   }
 }
 
