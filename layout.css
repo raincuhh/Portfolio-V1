@@ -213,6 +213,12 @@
             color: var(--text-base);
           }
         }
+        p:hover {
+          a {
+            text-decoration: underline;
+          }
+        }
+
         .link {
           margin-top: 2rem;
         }
