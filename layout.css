@@ -17,6 +17,10 @@
     line-height: 1rem;
     color: var(--text-inactive);
     margin-bottom: clamp(2rem, 10vw, 4rem);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--padding-base);
+    max-width: var(--max-content-width);
   }
 }
 
@@ -27,8 +31,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     height: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 5rem var(--padding-base) 0;
     max-width: var(--max-content-width);
@@ -95,66 +99,64 @@
     margin: 0 auto;
     padding: 3rem var(--padding-base);
     max-width: var(--max-content-width);
-    .wrapper {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .aboutContainer {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      .aboutContainer {
-        display: flex;
-        flex-direction: column;
-        gap: clamp(3rem, 6.4vw, 2rem);
-        font-family: "hind", sans-serif;
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
-      .aboutBeside {
-        display: flex;
-        flex-direction: column;
-        font-family: "hind", sans-serif;
-        font-size: clamp(1rem, 12vw, 1.5rem);
-        .experience,
-        .education {
-          .header {
-            color: var(--text-inactive);
-            font-size: clamp(0.8rem, 12vw, 1.3rem);
-          }
-          .experienceContainer,
-          .educationContainer {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(0.5rem, 12.4vw, 1rem);
-
-            .experienceBox,
-            .educationBox {
-              font-size: 1rem;
-            }
-          }
+      gap: clamp(3rem, 6.4vw, 2rem);
+      font-family: "hind", sans-serif;
+      font-size: clamp(2rem, 2.4vw, 3rem);
+      line-height: clamp(2.4rem, 4.4vw, 3.7rem);
+    }
+    .aboutBeside {
+      display: flex;
+      flex-direction: column;
+      font-family: "hind", sans-serif;
+      .experience,
+      .education {
+        .header {
+          color: var(--text-inactive);
+          font-size: clamp(0.8rem, 12vw, 1.8rem);
         }
-        .experience,
-        .education {
-          margin-bottom: 2rem;
-        }
-        .skills {
-          .header {
-            color: var(--text-inactive);
-            font-size: clamp(0.8rem, 12vw, 1.3rem);
-          }
-        }
-        .skillsContainer {
+        .experienceContainer,
+        .educationContainer {
           display: flex;
           flex-direction: column;
-          gap: 0.25rem, 12.4vw, 0.5rem;
-          .skillsBox {
-            display: flex;
-            gap: 0.5rem;
-            font-size: 1rem;
-            align-items: center;
-            .icon {
-              img {
-                width: 1rem;
-                height: auto;
-                filter: grayscale(100%);
-              }
+          gap: clamp(0.5rem, 12.4vw, 1rem);
+
+          .experienceBox,
+          .educationBox {
+            font-size: clamp(1rem, 4.4vw, 1.25rem);
+          }
+        }
+      }
+      .experience,
+      .education {
+        margin-bottom: 2rem;
+      }
+      .skills {
+        .header {
+          color: var(--text-inactive);
+          font-size: clamp(0.8rem, 12vw, 1.8rem);
+        }
+      }
+      .skillsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem, 12.4vw, 0.5rem;
+        .skillsBox {
+          display: flex;
+          gap: 0.5rem;
+          font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+          align-items: center;
+          .icon {
+            img {
+              width: 1rem;
+              height: auto;
+              filter: grayscale(100%);
             }
           }
         }
@@ -180,6 +182,58 @@
     margin: 0 auto;
     padding: 3rem var(--padding-base);
     max-width: var(--max-content-width);
+    .projectHeader {
+      font-family: "hind", sans-serif;
+      font-size: clamp(2.5rem, 4.4vw, 4rem);
+      line-height: 2.5rem;
+      margin-bottom: clamp(1rem, 6.4vw, 2rem);
+    }
+    .projectImg {
+      margin: 0 0 clamp(1rem, 6.4vw, 2.2rem);
+      img {
+        width: 100%;
+      }
+    }
+    .projectContainer {
+      display: flex;
+      flex-direction: column;
+      .projectInfo {
+        display: flex;
+        flex-direction: column;
+        font-family: "hind", sans-serif;
+        font-size: clamp(1.8rem, 4.4vw, 2rem);
+        line-height: clamp(2.25rem, 4.4vw, 4rem);
+        margin-bottom: clamp(3rem, 6.4vw, 2rem);
+        span {
+          color: var(--text-inactive);
+        }
+        p {
+          a {
+            text-decoration: none;
+            color: var(--text-base);
+          }
+        }
+        .link {
+          margin-top: 2rem;
+        }
+      }
+      .projectDescription {
+        font-family: "hind", sans-serif;
+        font-size: clamp(1.8rem, 4.4vw, 2rem);
+        line-height: clamp(2.25rem, 4.4vw, 4rem);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3rem, 6.4vw, 2rem);
+        span {
+          color: var(--text-inactive);
+        }
+        p {
+          .header {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -228,13 +282,45 @@
 @media (min-width: 768px) {
   .about {
     .container {
-      .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: clamp(3rem, 6.4vw, 6rem);
+      .aboutBeside {
+        width: 60rem;
+      }
+    }
+  }
+  .projects {
+    .container {
+      .projectContainer {
         flex-direction: row;
-        justify-content: space-between;
         gap: clamp(3rem, 6.4vw, 6rem);
-        .aboutBeside {
-          width: 60rem;
+        .projectInfo {
+          width: clamp(42rem, 45vw, 50rem);
+          font-size: clamp(1rem, 1.6vw, 1.3rem);
+          line-height: clamp(1rem, 2.5vw, 1.8rem);
         }
+        .projectDescription {
+          font-size: clamp(1rem, 1.6vw, 1.3rem);
+          line-height: clamp(1rem, 2.5vw, 1.8rem);
+          gap: clamp(1.4rem, 1.4vw, 3rem);
+          p {
+            .header {
+              font-size: clamp(0.8rem, 1.6vw, 1.25rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    .container {
+      .footerLegal {
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
