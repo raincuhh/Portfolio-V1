@@ -103,7 +103,7 @@ body {
             justify-content: space-between;
             width: 20px;
             height: 20px;
-
+            padding-right: 0.6rem;
             transform: translate(0px, 0px);
             opacity: 1;
             .line {
@@ -131,7 +131,7 @@ body {
             justify-content: center;
             width: 20px;
             height: 20px;
-
+            padding-right: 0.6rem;
             transform: translate(170px, 0px);
             opacity: 0;
             .line {

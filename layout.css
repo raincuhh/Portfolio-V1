@@ -206,8 +206,8 @@
         display: flex;
         flex-direction: column;
         font-family: "hind", sans-serif;
-        font-size: clamp(1.8rem, 4.4vw, 2rem);
-        line-height: clamp(2.25rem, 4.4vw, 4rem);
+        font-size: clamp(1.2rem, 3.4vw, 2rem);
+        line-height: clamp(1.36rem, 3.4vw, 4rem);
         margin-bottom: clamp(3rem, 6.4vw, 2rem);
         span {
           color: var(--text-inactive);
@@ -224,8 +224,8 @@
       }
       .projectDescription {
         font-family: "hind", sans-serif;
-        font-size: clamp(1.8rem, 4.4vw, 2rem);
-        line-height: clamp(2.25rem, 4.4vw, 4rem);
+        font-size: clamp(1.2rem, 3.4vw, 2rem);
+        line-height: clamp(1.36rem, 3.4vw, 4rem);
         display: flex;
         flex-direction: column;
         gap: clamp(3rem, 6.4vw, 2rem);
@@ -234,7 +234,7 @@
         }
         p {
           .header {
-            font-size: 1.5rem;
+            font-size: clamp(0.9rem, 3vw, 1.4rem);
           }
         }
       }
