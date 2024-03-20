@@ -4,7 +4,14 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 2000);
 });
 
-let animatedWords = ["websites", "apps", "games", "ux/ui", "things"];
+let animatedWords = [
+  "websites",
+  "apps",
+  "games",
+  "ux/ui",
+  "things",
+  "projects",
+];
 let animatedWordsIndex = 0;
 
 function iterateThroughAnimatedWords() {
@@ -15,8 +22,8 @@ function iterateThroughAnimatedWords() {
 }
 
 function changeCopyrightPresentYear() {
-  const date = new Date();
-  let currentYear = date.getFullYear();
+  const DATE = new Date();
+  let currentYear = DATE.getFullYear();
   let copyrightCurrentYearSpan = document.querySelector(
     "#copyrightCurrentYear"
   );
