@@ -1,543 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>filipryan.dev | home</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>filipryan.dev | home</title>
+      <link
+         rel="icon"
+         type="image/png"
+         href="assets/favicon-32x32.png"
+         sizes="32x32"
+      />
+      <link
+         rel="icon"
+         type="image/png"
+         href="assets/favicon-16x16.png"
+         sizes="16x16"
+      />
+      <link rel="icon" type="image/png" href="assets/favicon.ico" />
 
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="layout.css" />
-    <link rel="stylesheet" href="global/globalLayout.css" />
-    <link rel="stylesheet" href="global/fonts.css" />
-    <link rel="stylesheet" href="global/constants.css" />
-  </head>
-  <body>
-    <section class="root">
-      <div class="preLoader">
-        <div class="placeholderFrame"></div>
-        <div class="grayFrame"></div>
-        <div class="blackFrame"></div>
-        <div class="logoFrame">
-          <img src="assets/frLogo.png" alt="FR" class="logo" />
-        </div>
-      </div>
-      <header class="topHeader">
-        <div class="container">
-          <div class="left hoverableElement">
-            <button class="leftInner" onclick="window.location.reload()">
-              <div class="label">filipryan.dev</div>
-            </button>
-          </div>
-          <div class="right">
-            <button class="hamburger hoverableElement" id="navbarToggleButton">
-              <div class="inner">
-                <div class="hamburgerOpen">
-                  <span class="line"></span>
-                  <span class="line"></span>
-                  <span class="line"></span>
-                </div>
-                <div class="hamburgerClosed">
-                  <span class="line"></span>
-                  <span class="line"></span>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </header>
-      <nav class="navbar">
-        <div class="shade"></div>
-        <div class="content">
-          <div class="container">
-            <div class="inner">
-              <section class="contact">
-                <header class="title">Say hello</header>
-                <section class="contactInfo">
-                  <p class="contactTitle">Info</p>
-                  <a class="hoverableElement" href="tel:+4792081617">
-                    (+47) 920 81 617
-                  </a>
-                  <a
-                    class="hoverableElement"
-                    href="mailto:filipryanbusinessmail@gmail.com"
+      <link
+         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="layout.css" />
+      <link rel="stylesheet" href="global/globalLayout.css" />
+      <link rel="stylesheet" href="global/fonts.css" />
+      <link rel="stylesheet" href="global/constants.css" />
+   </head>
+   <body>
+      <section class="root">
+         <div class="preLoader">
+            <div class="placeholderFrame"></div>
+            <div class="grayFrame"></div>
+            <div class="blackFrame"></div>
+            <div class="logoFrame">
+               <img src="assets/frLogo.png" alt="FR" class="logo" />
+            </div>
+         </div>
+         <header class="topHeader">
+            <div class="container">
+               <div class="left hoverableElement">
+                  <button class="leftInner" onclick="window.location.reload()">
+                     <div class="label">filipryan.dev</div>
+                  </button>
+               </div>
+               <div class="right">
+                  <button
+                     class="hamburger hoverableElement"
+                     id="navbarToggleButton"
                   >
-                    filipryanbusinessmail@gmail.com
-                  </a>
-                </section>
-              </section>
-              <section class="info">
-                <header class="label">
-                  <div class="description">Get in touch</div>
-                </header>
-                <div class="socials">
-                  <div class="social hoverableElement" id="linkedin">
-                    <a href="#">
-                      <i class="bx bxl-linkedin"></i>
-                    </a>
-                  </div>
-                  <div class="social hoverableElement" id="github">
-                    <a href="https://github.com/raincuhh">
-                      <i class="bx bxl-github"></i>
-                    </a>
-                  </div>
-                  <div class="social hoverableElement" id="codepen">
-                    <a href="https://codepen.io/filip-ryan">
-                      <i class="bx bxl-codepen"></i>
-                    </a>
-                  </div>
-                  <div class="social hoverableElement" id="stackoverflow">
-                    <a href="https://stackoverflow.com/users/22647357/raincuh">
-                      <i class="bx bxl-stack-overflow"></i>
-                    </a>
-                  </div>
-                </div>
-              </section>
+                     <div class="inner">
+                        <div class="hamburgerOpen">
+                           <span class="line"></span>
+                           <span class="line"></span>
+                           <span class="line"></span>
+                        </div>
+                        <div class="hamburgerClosed">
+                           <span class="line"></span>
+                           <span class="line"></span>
+                        </div>
+                     </div>
+                  </button>
+               </div>
             </div>
-          </div>
-        </div>
-      </nav>
-      <div class="cursor">
-        <div class="cursorDot" data-cursor-dot></div>
-        <div class="cursorOutline" data-cursor-outline></div>
-      </div>
-      <!-- main -->
-      <main class="layout">
-        <section class="hero">
-          <div class="container">
-            <section class="title">
-              <div class="heroText">filip ryan</div>
-              <div class="heroText">paulsen</div>
+         </header>
+         <nav class="navbar">
+            <div class="shade"></div>
+            <div class="content">
+               <div class="container">
+                  <div class="inner">
+                     <section class="contact">
+                        <header class="title">Say hello</header>
+                        <section class="contactInfo">
+                           <p class="contactTitle">Info</p>
+                           <a class="hoverableElement" href="tel:+4792081617">
+                              (+47) 920 81 617
+                           </a>
+                           <a
+                              class="hoverableElement"
+                              href="mailto:filipryanbusinessmail@gmail.com"
+                           >
+                              filipryanbusinessmail@gmail.com
+                           </a>
+                        </section>
+                     </section>
+                     <section class="info">
+                        <header class="label">
+                           <div class="description">Get in touch</div>
+                        </header>
+                        <div class="socials">
+                           <div class="social hoverableElement" id="linkedin">
+                              <a href="#">
+                                 <i class="bx bxl-linkedin"></i>
+                              </a>
+                           </div>
+                           <div class="social hoverableElement" id="github">
+                              <a href="https://github.com/raincuhh">
+                                 <i class="bx bxl-github"></i>
+                              </a>
+                           </div>
+                           <div class="social hoverableElement" id="codepen">
+                              <a href="https://codepen.io/filip-ryan">
+                                 <i class="bx bxl-codepen"></i>
+                              </a>
+                           </div>
+                           <div
+                              class="social hoverableElement"
+                              id="stackoverflow"
+                           >
+                              <a
+                                 href="https://stackoverflow.com/users/22647357/raincuh"
+                              >
+                                 <i class="bx bxl-stack-overflow"></i>
+                              </a>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <div class="cursor">
+            <div class="cursorDot" data-cursor-dot></div>
+            <div class="cursorOutline" data-cursor-outline></div>
+         </div>
+         <!-- main -->
+         <main class="layout">
+            <section class="hero">
+               <div class="container">
+                  <section class="title">
+                     <div class="heroText">filip ryan</div>
+                     <div class="heroText">paulsen</div>
+                  </section>
+                  <section class="subTitle">
+                     <div class="wrapper">
+                        <article class="infoBox" id="infoBox1">
+                           <p class="boxContainer">
+                              <span class="header">intro</span>
+                              Hi, i'm Filip, i like to develop
+                              <span id="infoBoxAnimSpan">websites</span>
+                           </p>
+                           <div class="pointer">
+                              <i class="bx bx-subdirectory-right"></i>
+                           </div>
+                        </article>
+                        <article class="infoBox" id="infoBox2">
+                           <p class="boxContainer">
+                              <span class="header">intro</span>
+                              Currently striving to innovate in digital
+                              experiences through my passion for programming.
+                           </p>
+                        </article>
+                     </div>
+                  </section>
+               </div>
             </section>
-            <section class="subTitle">
-              <div class="wrapper">
-                <article class="infoBox" id="infoBox1">
-                  <p class="boxContainer">
-                    <span class="header">intro</span>
-                    Hi, i'm Filip, i like to develop
-                    <span id="infoBoxAnimSpan">websites</span>
-                  </p>
-                  <div class="pointer">
-                    <i class="bx bx-subdirectory-right"></i>
-                  </div>
-                </article>
-                <article class="infoBox" id="infoBox2">
-                  <p class="boxContainer">
-                    <span class="header">intro</span>
-                    Currently striving to innovate in digital experiences
-                    through my passion for programming.
-                  </p>
-                </article>
-              </div>
+
+            <section class="about">
+               <header class="sectionHeader">about</header>
+               <div class="container">
+                  <article class="aboutContainer">
+                     <p>
+                        Hey there! I'm Filip, a Filipino-Norwegian with a
+                        passion for volleyball, the gym, and programming.
+                     </p>
+                     <p>
+                        I enjoy making digital experiences, games and developing
+                        software, channeling my creativity into bringing ideas
+                        to life through the code that I write.
+                     </p>
+                     <p>
+                        When I'm not spiking on the volleyball court or
+                        programming skills, you'll find me hitting the gym or
+                        exploring whats new in technology.
+                     </p>
+                     <p>Welcome to my blog? or portfolio website.</p>
+                  </article>
+                  <article class="aboutBeside">
+                     <aside class="beside" id="experience">
+                        <header class="header">experience</header>
+                     </aside>
+                     <aside class="beside" id="education">
+                        <header class="header">education</header>
+                        <div class="besideContainer">
+                           <div class="besideBox">
+                              <p class="date">2013 - 2020</p>
+                              <p class="institution">åvangen skole</p>
+                              <p class="info">
+                                 finished primary school education
+                              </p>
+                           </div>
+                           <div class="besideBox">
+                              <p class="date">2020 - 2023</p>
+                              <p class="institution">nøkkeland skole</p>
+                              <p class="info">
+                                 finished secondary school education
+                              </p>
+                           </div>
+                           <div class="besideBox">
+                              <p class="date">2023 - 2024</p>
+                              <p class="institution">kirkeparken vgs 1-IMB</p>
+                              <p class="info">
+                                 studying computer science & mediaproduction
+                              </p>
+                           </div>
+                           <div class="besideBox">
+                              <p class="date">2024 - now</p>
+                              <p class="institution">Kirkeparken vgs 2-ITA</p>
+                              <p class="info">
+                                 branched away from medieproduction and only
+                                 studying computer science now
+                              </p>
+                           </div>
+                        </div>
+                     </aside>
+                     <aside class="beside" id="skills">
+                        <header class="header">skills</header>
+                        <div class="besideContainer skillsContainer">
+                           <div class="besideBox skillsBox">
+                              <p class="skill">html</p>
+                              <p class="icon">
+                                 <i class="bx bxl-html5"></i>
+                              </p>
+                           </div>
+                           <div class="besideBox skillsBox">
+                              <p class="skill">css</p>
+                              <p class="icon">
+                                 <i class="bx bxl-css3"></i>
+                              </p>
+                           </div>
+                           <div class="besideBox skillsBox">
+                              <p class="skill">javascript</p>
+                              <p class="icon">
+                                 <i class="bx bxl-javascript"></i>
+                              </p>
+                           </div>
+                           <div class="besideBox skillsBox">
+                              <p class="skill">gsap</p>
+                              <p class="icon">
+                                 <img
+                                    src="assets/gsap-greensock.svg"
+                                    alt="gsap"
+                                 />
+                              </p>
+                           </div>
+                           <div class="besideBox skillsBox">
+                              <p class="skill">godot & gdscript</p>
+                              <p class="icon">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1em"
+                                    height="1em"
+                                    viewBox="0 0 32 32"
+                                 >
+                                    <path
+                                       fill="currentColor"
+                                       d="M12.745.917c-1.458.328-2.906.781-4.266 1.464a32.09 32.09 0 0 0 .266 3.505c-.526.339-1.078.63-1.568 1.026c-.5.38-1.01.75-1.464 1.198a28.31 28.31 0 0 0-2.849-1.651C1.801 7.6.812 8.834-.001 10.214c.609.99 1.25 1.911 1.938 2.792h.016v8.474a.15.15 0 0 1 .047.005l5.198.5a.554.554 0 0 1 .5.521l.161 2.292l4.531.323l.313-2.115a.56.56 0 0 1 .552-.479h5.484a.56.56 0 0 1 .552.479l.313 2.115l4.531-.323l.161-2.292a.554.554 0 0 1 .505-.521l5.193-.5c.016 0 .031-.005.047-.005v-8.474h.021a29.489 29.489 0 0 0 1.932-2.792c-.807-1.38-1.802-2.615-2.865-3.755A28.99 28.99 0 0 0 26.28 8.11c-.453-.448-.958-.818-1.458-1.198c-.495-.396-1.047-.688-1.573-1.026c.156-1.161.234-2.307.266-3.505c-1.354-.682-2.802-1.135-4.266-1.464A30.66 30.66 0 0 0 17.671 4a11.064 11.064 0 0 0-1.661-.13h-.026c-.552.005-1.109.042-1.661.13A29.889 29.889 0 0 0 12.74.917zm-4.11 12.406a3.134 3.134 0 0 1 3.13 3.135a3.13 3.13 0 1 1-6.26 0a3.134 3.134 0 0 1 3.13-3.135m14.73 0a3.134 3.134 0 0 1 3.13 3.135a3.13 3.13 0 1 1-6.26 0a3.134 3.134 0 0 1 3.13-3.135M8.932 14.568a2.076 2.076 0 1 0 0 4.151a2.077 2.077 0 0 0 2.083-2.073a2.078 2.078 0 0 0-2.083-2.078m14.131 0a2.076 2.076 0 1 0 0 4.151a2.073 2.073 0 0 0 2.078-2.073a2.074 2.074 0 0 0-2.078-2.078M16 15.172c.557 0 1.01.406 1.01.911v2.885c0 .505-.453.917-1.01.917s-1.01-.411-1.01-.917v-2.885c0-.505.453-.911 1.01-.911M1.948 22.599c0 .505.005 1.052.005 1.161c0 4.938 6.26 7.307 14.036 7.333h.021c7.776-.026 14.031-2.396 14.031-7.333l.01-1.161l-4.672.453l-.161 2.307a.556.556 0 0 1-.516.516l-5.578.396a.56.56 0 0 1-.552-.474l-.318-2.156h-4.516l-.318 2.156a.557.557 0 0 1-.594.474l-5.531-.396a.565.565 0 0 1-.521-.516l-.156-2.307l-4.672-.448z"
+                                    ></path>
+                                 </svg>
+                              </p>
+                           </div>
+                           <div class="besideBox skillsBox">
+                              <p class="skill">C++</p>
+                              <p class="icon"></p>
+                           </div>
+                           <div class="besideBox skillsBox">
+                              <p class="skill">adobe</p>
+                              <p class="icon">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="1em"
+                                    height="1em"
+                                    viewBox="0 0 32 32"
+                                 >
+                                    <path
+                                       fill="currentColor"
+                                       d="M0 .401v31.198h32V.401zm1.333 1.333h29.333v28.531H1.333zm6.401 5.974c0-.089.188-.156.297-.156a76.42 76.42 0 0 1 3.438-.068c3.698 0 5.135 2.026 5.135 4.62c0 3.391-2.458 4.844-5.469 4.844c-.51 0-.682-.026-1.036-.026v5.125c0 .109-.042.156-.151.156H7.885c-.109 0-.151-.042-.151-.151zm2.365 7.084c.307.021.552.021 1.083.021c1.557 0 3.026-.552 3.026-2.661c0-1.693-1.052-2.552-2.833-2.552c-.526 0-1.031.021-1.276.042zm11.479-1.589c-1.057 0-1.411.531-1.411.969c0 .484.24.813 1.651 1.542c2.089 1.016 2.75 1.979 2.75 3.411c0 2.13-1.63 3.276-3.828 3.276c-1.167 0-2.161-.245-2.734-.573c-.083-.042-.104-.109-.104-.219v-1.958c0-.13.063-.177.151-.109a4.9 4.9 0 0 0 2.682.792c1.057 0 1.495-.438 1.495-1.036c0-.484-.307-.901-1.646-1.604c-1.896-.906-2.688-1.828-2.688-3.37c0-1.719 1.344-3.146 3.672-3.146c1.146 0 1.953.177 2.396.37c.109.068.13.177.13.266v1.828c0 .109-.068.177-.198.13c-.594-.349-1.469-.573-2.323-.573z"
+                                    ></path>
+                                 </svg>
+                              </p>
+                           </div>
+                        </div>
+                     </aside>
+                  </article>
+               </div>
             </section>
-          </div>
-        </section>
 
-        <section class="about">
-          <header class="sectionHeader">about</header>
-          <div class="container">
-            <article class="aboutContainer">
-              <p>
-                Hey there! I'm Filip, a Filipino-Norwegian with a passion for
-                volleyball, the gym, and programming.
-              </p>
-              <p>
-                I enjoy making digital experiences, games and developing
-                software, channeling my creativity into bringing ideas to life
-                through the code that I write.
-              </p>
-              <p>
-                When I'm not spiking on the volleyball court or programming
-                skills, you'll find me hitting the gym or exploring whats new in
-                technology.
-              </p>
-              <p>Welcome to my blog? or portfolio website.</p>
-            </article>
-            <article class="aboutBeside">
-              <aside class="beside" id="experience">
-                <header class="header">experience</header>
-              </aside>
-              <aside class="beside" id="education">
-                <header class="header">education</header>
-                <div class="besideContainer">
-                  <div class="besideBox">
-                    <p class="date">2013 - 2020</p>
-                    <p class="institution">åvangen skole</p>
-                    <p class="info">finished primary school education</p>
+            <section class="cv">
+               <header class="sectionHeader">curriculum vitae</header>
+               <div class="container">
+                  <div class="cvTitle">
+                     <p>
+                        Are you a hiring manager?
+                        <span>(or just looking to look)</span>
+                     </p>
+                     <p>
+                        download my cv
+                        <span id="cvPointer">
+                           <i class="bx bx-subdirectory-left bx-rotate-270"></i>
+                        </span>
+                     </p>
                   </div>
-                  <div class="besideBox">
-                    <p class="date">2020 - 2023</p>
-                    <p class="institution">nøkkeland skole</p>
-                    <p class="info">finished secondary school education</p>
+                  <div class="cvDownload">
+                     <a href="assets/Ryan-CV3.pdf" download="Ryan-CV.pdf">
+                        <span> curriculum vitae </span>
+                     </a>
                   </div>
-                  <div class="besideBox">
-                    <p class="date">2023 - 2024</p>
-                    <p class="institution">kirkeparken vgs 1-IMB</p>
-                    <p class="info">
-                      studying computer science & mediaproduction
-                    </p>
-                  </div>
-                  <div class="besideBox">
-                    <p class="date">2024 - now</p>
-                    <p class="institution">Kirkeparken vgs 2-ITA</p>
-                    <p class="info">
-                      branched away from medieproduction and only studying
-                      computer science now
-                    </p>
-                  </div>
-                </div>
-              </aside>
-              <aside class="beside" id="skills">
-                <header class="header">skills</header>
-                <div class="besideContainer skillsContainer">
-                  <div class="besideBox skillsBox">
-                    <p class="skill">html</p>
-                    <p class="icon">
-                      <i class="bx bxl-html5"></i>
-                    </p>
-                  </div>
-                  <div class="besideBox skillsBox">
-                    <p class="skill">css</p>
-                    <p class="icon">
-                      <i class="bx bxl-css3"></i>
-                    </p>
-                  </div>
-                  <div class="besideBox skillsBox">
-                    <p class="skill">javascript</p>
-                    <p class="icon">
-                      <i class="bx bxl-javascript"></i>
-                    </p>
-                  </div>
-                  <div class="besideBox skillsBox">
-                    <p class="skill">gsap</p>
-                    <p class="icon">
-                      <img src="assets/gsap-greensock.svg" alt="gsap" />
-                    </p>
-                  </div>
-                  <div class="besideBox skillsBox">
-                    <p class="skill">godot & gdscript</p>
-                    <p class="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 32 32"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M12.745.917c-1.458.328-2.906.781-4.266 1.464a32.09 32.09 0 0 0 .266 3.505c-.526.339-1.078.63-1.568 1.026c-.5.38-1.01.75-1.464 1.198a28.31 28.31 0 0 0-2.849-1.651C1.801 7.6.812 8.834-.001 10.214c.609.99 1.25 1.911 1.938 2.792h.016v8.474a.15.15 0 0 1 .047.005l5.198.5a.554.554 0 0 1 .5.521l.161 2.292l4.531.323l.313-2.115a.56.56 0 0 1 .552-.479h5.484a.56.56 0 0 1 .552.479l.313 2.115l4.531-.323l.161-2.292a.554.554 0 0 1 .505-.521l5.193-.5c.016 0 .031-.005.047-.005v-8.474h.021a29.489 29.489 0 0 0 1.932-2.792c-.807-1.38-1.802-2.615-2.865-3.755A28.99 28.99 0 0 0 26.28 8.11c-.453-.448-.958-.818-1.458-1.198c-.495-.396-1.047-.688-1.573-1.026c.156-1.161.234-2.307.266-3.505c-1.354-.682-2.802-1.135-4.266-1.464A30.66 30.66 0 0 0 17.671 4a11.064 11.064 0 0 0-1.661-.13h-.026c-.552.005-1.109.042-1.661.13A29.889 29.889 0 0 0 12.74.917zm-4.11 12.406a3.134 3.134 0 0 1 3.13 3.135a3.13 3.13 0 1 1-6.26 0a3.134 3.134 0 0 1 3.13-3.135m14.73 0a3.134 3.134 0 0 1 3.13 3.135a3.13 3.13 0 1 1-6.26 0a3.134 3.134 0 0 1 3.13-3.135M8.932 14.568a2.076 2.076 0 1 0 0 4.151a2.077 2.077 0 0 0 2.083-2.073a2.078 2.078 0 0 0-2.083-2.078m14.131 0a2.076 2.076 0 1 0 0 4.151a2.073 2.073 0 0 0 2.078-2.073a2.074 2.074 0 0 0-2.078-2.078M16 15.172c.557 0 1.01.406 1.01.911v2.885c0 .505-.453.917-1.01.917s-1.01-.411-1.01-.917v-2.885c0-.505.453-.911 1.01-.911M1.948 22.599c0 .505.005 1.052.005 1.161c0 4.938 6.26 7.307 14.036 7.333h.021c7.776-.026 14.031-2.396 14.031-7.333l.01-1.161l-4.672.453l-.161 2.307a.556.556 0 0 1-.516.516l-5.578.396a.56.56 0 0 1-.552-.474l-.318-2.156h-4.516l-.318 2.156a.557.557 0 0 1-.594.474l-5.531-.396a.565.565 0 0 1-.521-.516l-.156-2.307l-4.672-.448z"
-                        ></path>
-                      </svg>
-                    </p>
-                  </div>
-                  <div class="besideBox skillsBox">
-                    <p class="skill">C++</p>
-                    <p class="icon"></p>
-                  </div>
-                  <div class="besideBox skillsBox">
-                    <p class="skill">adobe</p>
-                    <p class="icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 32 32"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M0 .401v31.198h32V.401zm1.333 1.333h29.333v28.531H1.333zm6.401 5.974c0-.089.188-.156.297-.156a76.42 76.42 0 0 1 3.438-.068c3.698 0 5.135 2.026 5.135 4.62c0 3.391-2.458 4.844-5.469 4.844c-.51 0-.682-.026-1.036-.026v5.125c0 .109-.042.156-.151.156H7.885c-.109 0-.151-.042-.151-.151zm2.365 7.084c.307.021.552.021 1.083.021c1.557 0 3.026-.552 3.026-2.661c0-1.693-1.052-2.552-2.833-2.552c-.526 0-1.031.021-1.276.042zm11.479-1.589c-1.057 0-1.411.531-1.411.969c0 .484.24.813 1.651 1.542c2.089 1.016 2.75 1.979 2.75 3.411c0 2.13-1.63 3.276-3.828 3.276c-1.167 0-2.161-.245-2.734-.573c-.083-.042-.104-.109-.104-.219v-1.958c0-.13.063-.177.151-.109a4.9 4.9 0 0 0 2.682.792c1.057 0 1.495-.438 1.495-1.036c0-.484-.307-.901-1.646-1.604c-1.896-.906-2.688-1.828-2.688-3.37c0-1.719 1.344-3.146 3.672-3.146c1.146 0 1.953.177 2.396.37c.109.068.13.177.13.266v1.828c0 .109-.068.177-.198.13c-.594-.349-1.469-.573-2.323-.573z"
-                        ></path>
-                      </svg>
-                    </p>
-                  </div>
-                </div>
-              </aside>
-            </article>
-          </div>
-        </section>
-
-        <section class="cv">
-          <header class="sectionHeader">curriculum vitae</header>
-          <div class="container">
-            <div class="cvTitle">
-              <p>
-                Are you a hiring manager?
-                <span>(or just looking to look)</span>
-              </p>
-              <p>
-                download my cv
-                <span id="cvPointer">
-                  <i class="bx bx-subdirectory-left bx-rotate-270"></i>
-                </span>
-              </p>
-            </div>
-            <div class="cvDownload">
-              <a href="assets/Ryan-CV3.pdf" download="Ryan-CV.pdf">
-                <span> curriculum vitae </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="projects">
-          <header class="sectionHeader">projects</header>
-
-          <article class="project">
-            <div class="container">
-              <header class="projectHeader">"Joy" ride</header>
-              <div class="projectImg">
-                <img src="assets/joyride_TitleScreen.png" alt="" />
-              </div>
-              <section class="projectContainer">
-                <article class="projectInfo">
-                  <p class="type"><span>type</span> social campaign, game</p>
-                  <p class="client hoverableElement">
-                    <span>client</span>
-                    <a
-                      href="https://www.ungitrafikken.no/kampanjer-og-prosjekter/deathtrip"
-                    >
-                      ung i trafikken, deathtrip
-                    </a>
-                  </p>
-                  <p class="tools">
-                    <span>tools & tech</span> godot, gdscript, pixelorama,
-                    photoshop
-                  </p>
-                  <p class="year"><span>year</span> 2024</p>
-                  <p class="link hoverableElement">
-                    <a href="https://github.com/raincuhh/DeathTripGame">
-                      github repository
-                    </a>
-                  </p>
-                </article>
-                <article class="projectDescription">
-                  <p>
-                    <span class="header">brief & credits</span> "Joy"ride is a
-                    submission towards the "ung I trafikken", deathtrip
-                    campaign. The deathtrip campaign is a Norwegian nationwide
-                    project about creating attitude-campaigns against drunk
-                    driving.
-                  </p>
-                  <p>
-                    I decided to group up with a few friends who decided to make
-                    an interactive short film; while I decided to make an
-                    endless runner, jetpack joyride inspired game. Also
-                    coincidentally the name of the game.
-                  </p>
-                  <p>
-                    <span>idea</span> Filip Ryan S. Paulsen,
-                    <span>idea</span> Inderdeep Singh.
-                  </p>
-                </article>
-              </section>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="container">
-              <header class="projectHeader"><span>this</span> portfolio</header>
-              <div class="projectImg">
-                <img src="assets/placeholder_1920x1080.png" alt="portfolio" />
-                <!-- note to self, make the placeholder into a scroll down site looping vid -->
-              </div>
-              <div class="projectContainer">
-                <article class="projectInfo">
-                  <p class="type"><span>type</span> personal project</p>
-                  <p class="tools">
-                    <span>tools & tech</span> html, css, js, gsap
-                  </p>
-                  <p class="year"><span>year</span> 2024</p>
-                  <p class="link hoverableElement">
-                    <a href="https://github.com/raincuhh/portfolio_v1">
-                      github repository
-                    </a>
-                  </p>
-                </article>
-                <article class="projectDescription">
-                  <p>
-                    <span class="header">brief</span> yep, this portfolio. This
-                    was something initially stemming from a school assignment,
-                    but also something i had been planning already. However, it
-                    had been in the back of my mind being laid off.
-                  </p>
-                  <p>
-                    Now that i had a reason for making it, well youre on the
-                    site so you can take a look around.
-                  </p>
-                </article>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="container">
-              <header class="projectHeader"><span>the passage</span></header>
-              <div class="projectImg">
-                <img
-                  src="assets/ThePassagePreview.JPG"
-                  alt="thePassagePreview"
-                />
-              </div>
-              <div class="projectContainer">
-                <article class="projectInfo">
-                  <p class="type"><span>type</span> school project</p>
-                  <p class="tools">
-                    <span>tools & tech</span> Visual Studio Code, HTML5, CSS3,
-                    JavaScript
-                  </p>
-                  <p class="year"><span>year</span> 2024</p>
-                  <p class="link hoverableElement">
-                    <a href="https://github.com/raincuhh/the-passage">
-                      github repository
-                    </a>
-                  </p>
-                </article>
-                <article class="projectDescription">
-                  <p>
-                    <span class="header">brief</span> so we had a school project
-                    where we had to make a game, any sort of game, in
-                    javascript. I decided making a textbased roguelike seemed
-                    fun and did so.
-                  </p>
-                  <p>
-                    beware though i did not follow conventions on this, it was
-                    just a project i used to learn javascript basically so there
-                    is some weird (understatement really) code in there.
-                  </p>
-                </article>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="container">
-              <header class="projectHeader">
-                <span>work in progress projects</span>
-              </header>
-              <header class="projectHeader">
-                <span>Voxey</span>
-              </header>
-              <div class="projectImg">
-                <img
-                  src="assets/VoxeyPreviewImage2.JPG"
-                  alt="VoxeyPreviewImage"
-                />
-              </div>
-              <div class="projectContainer">
-                <article class="projectInfo">
-                  <p class="type">
-                    <span>type</span> personal project, Game Engine
-                  </p>
-                  <p class="tools">
-                    <span>tools & tech</span> Visual studio, C++, OpenGL, GLAD,
-                    GLFW, GLM
-                  </p>
-                  <p class="year"><span>year</span> 2024</p>
-                  <p class="link hoverableElement">
-                    <a href="https://github.com/raincuhh/voxey">
-                      github repository
-                    </a>
-                  </p>
-                </article>
-                <article class="projectDescription">
-                  <p>
-                    <span class="header">brief</span> currently i am learning
-                    C++ by making a minecraft clone with OpenGL, Glad and GLFW.
-                    this is pretty fun because i have been interested in
-                    learning C++ for a while and this seemed like a good project
-                    to take on while learning C++
-                  </p>
-                </article>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="container">
-              <header class="projectHeader">
-                <span>Amanises</span>
-              </header>
-              <div class="projectImg">
-                <img
-                  src="assets/AmanisesPreviewImage.JPG"
-                  alt="AmanisesPreviewImage"
-                />
-              </div>
-              <div class="projectContainer">
-                <article class="projectInfo">
-                  <p class="type">
-                    <span>type</span> personal project, Compiler
-                  </p>
-                  <p class="tools">
-                    <span>tools & tech</span> Visual Studio, C++, Cmake, no llvm
-                  </p>
-                  <p class="year"><span>year</span> 2024</p>
-                  <div class="link hoverableElement">
-                    <a href="https://github.com/raincuhh/amanises">
-                      github repository
-                    </a>
-                  </div>
-                </article>
-                <article class="projectDescription">
-                  <p>
-                    <span class="header">brief</span> yeah so C++ is pretty fun,
-                    and i have always been enamored by stuff like compilers and
-                    in general, low level stuff. I had no clue how they worked
-                    and i wanted to find out. thus the most logical decision is
-                    to make my own.
-                  </p>
-                  <p>
-                    My main goal that i want to achieve through this project is
-                    to actually eventually make my own programming language
-                    (yeah yeah quite ambitious). And then my finale goal is to
-                    make a bootstrapped compiler (i.e a compiler written in the
-                    language it compiles to).
-                  </p>
-                </article>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <footer class="footer">
-          <div class="container">
-            <section class="footerGlobal"></section>
-            <section class="footerLegal">
-              <div class="copyright">
-                <span class="copyrightDate">
-                  ©2024-<span id="copyrightCurrentYear"></span>
-                </span>
-                filipryan.dev - All Rights Reserved.
-              </div>
-              <div class="privacyPolicy hoverableElement">
-                <a href="legal/privacyPolicy/privacyPolicy.html">
-                  privacy policy
-                </a>
-              </div>
+               </div>
             </section>
-          </div>
-        </footer>
-      </main>
-    </section>
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- main js -->
-    <script type="module" src="index.js"></script>
-    <script src="global/constants.js"></script>
-  </body>
+
+            <section class="projects">
+               <header class="sectionHeader">projects</header>
+
+               <article class="project">
+                  <div class="container">
+                     <header class="projectHeader">"Joy" ride</header>
+                     <div class="projectImg">
+                        <img src="assets/joyride_preview.png" alt="" />
+                     </div>
+                     <section class="projectContainer">
+                        <article class="projectInfo">
+                           <p class="type">
+                              <span>type</span> social campaign, game
+                           </p>
+                           <p class="client hoverableElement">
+                              <span>client</span>
+                              <a
+                                 href="https://www.ungitrafikken.no/kampanjer-og-prosjekter/deathtrip"
+                              >
+                                 ung i trafikken, deathtrip
+                              </a>
+                           </p>
+                           <p class="tools">
+                              <span>tools & tech</span> godot, gdscript,
+                              pixelorama, photoshop
+                           </p>
+                           <p class="year"><span>year</span> 2024</p>
+                           <p class="link hoverableElement">
+                              <a
+                                 href="https://github.com/raincuhh/DeathTripGame"
+                              >
+                                 github repository
+                              </a>
+                           </p>
+                        </article>
+                        <article class="projectDescription">
+                           <p>
+                              <span class="header">brief & credits</span>
+                              "Joy"ride is a submission towards the "ung I
+                              trafikken", deathtrip campaign. The deathtrip
+                              campaign is a Norwegian nationwide project about
+                              creating attitude-campaigns against drunk driving.
+                           </p>
+                           <p>
+                              I decided to group up with a few friends who
+                              decided to make an interactive short film; while I
+                              decided to make an endless runner, jetpack joyride
+                              inspired game. Also coincidentally the name of the
+                              game.
+                           </p>
+                           <p>
+                              <span>idea</span> Filip Ryan S. Paulsen,
+                              <span>idea</span> Inderdeep Singh.
+                           </p>
+                        </article>
+                     </section>
+                  </div>
+               </article>
+
+               <article class="project">
+                  <div class="container">
+                     <header class="projectHeader">
+                        <span>this</span> portfolio
+                     </header>
+                     <div class="projectImg">
+                        <img
+                           src="assets/placeholder_1920x1080.png"
+                           alt="portfolio"
+                        />
+                        <!-- note to self, make the placeholder into a scroll down site looping vid -->
+                     </div>
+                     <div class="projectContainer">
+                        <article class="projectInfo">
+                           <p class="type">
+                              <span>type</span> personal project
+                           </p>
+                           <p class="tools">
+                              <span>tools & tech</span> html, css, js, gsap
+                           </p>
+                           <p class="year"><span>year</span> 2024</p>
+                           <p class="link hoverableElement">
+                              <a
+                                 href="https://github.com/raincuhh/portfolio_v1"
+                              >
+                                 github repository
+                              </a>
+                           </p>
+                        </article>
+                        <article class="projectDescription">
+                           <p>
+                              <span class="header">brief</span> yep, this
+                              portfolio. This was something initially stemming
+                              from a school assignment, but also something i had
+                              been planning already. However, it had been in the
+                              back of my mind being laid off.
+                           </p>
+                           <p>
+                              Now that i had a reason for making it, well youre
+                              on the site so you can take a look around.
+                           </p>
+                        </article>
+                     </div>
+                  </div>
+               </article>
+
+               <article class="project">
+                  <div class="container">
+                     <header class="projectHeader">
+                        <span>the passage</span>
+                     </header>
+                     <div class="projectImg">
+                        <img
+                           src="assets/thepassage_preview.JPG"
+                           alt="thePassagePreview"
+                        />
+                     </div>
+                     <div class="projectContainer">
+                        <article class="projectInfo">
+                           <p class="type"><span>type</span> school project</p>
+                           <p class="tools">
+                              <span>tools & tech</span> Visual Studio Code,
+                              HTML5, CSS3, JavaScript
+                           </p>
+                           <p class="year"><span>year</span> 2024</p>
+                           <p class="link hoverableElement">
+                              <a href="https://github.com/raincuhh/the-passage">
+                                 github repository
+                              </a>
+                           </p>
+                        </article>
+                        <article class="projectDescription">
+                           <p>
+                              <span class="header">brief</span> so we had a
+                              school project where we had to make a game, any
+                              sort of game, in javascript. I decided making a
+                              textbased roguelike seemed fun and did so.
+                           </p>
+                           <p>
+                              beware though i did not follow conventions on
+                              this, it was just a project i used to learn
+                              javascript basically so there is some weird
+                              (understatement really) code in there.
+                           </p>
+                        </article>
+                     </div>
+                  </div>
+               </article>
+
+               <article class="project">
+                  <div class="container">
+                     <header class="projectHeader">
+                        <span>work in progress projects</span>
+                     </header>
+                     <header class="projectHeader">
+                        <span>Voxey</span>
+                     </header>
+                     <div class="projectImg">
+                        <img
+                           src="assets/voxey_preview_2.JPG"
+                           alt="VoxeyPreviewImage"
+                        />
+                     </div>
+                     <div class="projectContainer">
+                        <article class="projectInfo">
+                           <p class="type">
+                              <span>type</span> personal project, Game Engine
+                           </p>
+                           <p class="tools">
+                              <span>tools & tech</span> Visual studio, C++,
+                              OpenGL, GLAD, GLFW, GLM
+                           </p>
+                           <p class="year"><span>year</span> 2024</p>
+                           <p class="link hoverableElement">
+                              <a href="https://github.com/raincuhh/voxey">
+                                 github repository
+                              </a>
+                           </p>
+                        </article>
+                        <article class="projectDescription">
+                           <p>
+                              <span class="header">brief</span> currently i am
+                              learning C++ by making a minecraft clone with
+                              OpenGL, Glad and GLFW. this is pretty fun because
+                              i have been interested in learning C++ for a while
+                              and this seemed like a good project to take on
+                              while learning C++
+                           </p>
+                        </article>
+                     </div>
+                  </div>
+               </article>
+
+               <article class="project">
+                  <div class="container">
+                     <header class="projectHeader">
+                        <span>Amanises</span>
+                     </header>
+                     <div class="projectImg">
+                        <img
+                           src="assets/amanises_preview.JPG"
+                           alt="AmanisesPreviewImage"
+                        />
+                     </div>
+                     <div class="projectContainer">
+                        <article class="projectInfo">
+                           <p class="type">
+                              <span>type</span> personal project, Compiler
+                           </p>
+                           <p class="tools">
+                              <span>tools & tech</span> Visual Studio, C++,
+                              Cmake, no llvm
+                           </p>
+                           <p class="year"><span>year</span> 2024</p>
+                           <div class="link hoverableElement">
+                              <a href="https://github.com/raincuhh/amanises">
+                                 github repository
+                              </a>
+                           </div>
+                        </article>
+                        <article class="projectDescription">
+                           <p>
+                              <span class="header">brief</span> yeah so C++ is
+                              pretty fun, and i have always been enamored by
+                              stuff like compilers and in general, low level
+                              stuff. I had no clue how they worked and i wanted
+                              to find out. thus the most logical decision is to
+                              make my own.
+                           </p>
+                           <p>
+                              My main goal that i want to achieve through this
+                              project is to actually eventually make my own
+                              programming language (yeah yeah quite ambitious).
+                              And then my finale goal is to make a bootstrapped
+                              compiler (i.e a compiler written in the language
+                              it compiles to).
+                           </p>
+                        </article>
+                     </div>
+                  </div>
+               </article>
+            </section>
+
+            <footer class="footer">
+               <div class="container">
+                  <section class="footerGlobal"></section>
+                  <section class="footerLegal">
+                     <div class="copyright">
+                        <span class="copyrightDate">
+                           ©2024-<span id="copyrightCurrentYear"></span>
+                        </span>
+                        filipryan.dev - All Rights Reserved.
+                     </div>
+                     <div class="privacyPolicy hoverableElement">
+                        <a href="legal/privacyPolicy/privacyPolicy.html">
+                           privacy policy
+                        </a>
+                     </div>
+                  </section>
+               </div>
+            </footer>
+         </main>
+      </section>
+      <!-- gsap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <!-- main js -->
+      <script type="module" src="index.js"></script>
+      <script src="global/constants.js"></script>
+   </body>
 </html>
